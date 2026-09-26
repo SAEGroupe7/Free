@@ -1,3 +1,4 @@
-footer { position: fixed; bottom: 1%; }
+footer { position: fixed; bottom: 1%;
+       width: 100%}
 img { float: left;
     margin-right: 10px;}
