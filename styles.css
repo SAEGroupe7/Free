@@ -1,29 +1,142 @@
-.content img{
-margin: 20px;}
-img {
-  float: left;
-  margin-right: 10px; /* espace entre l'image et le texte à sa droite */   
-}   
-footer { position: fixed; bottom: 1%;
-width: 100% }
-#btnMenu {
-  background: light-grey;
-  border: black;
-  cursor: pointer;
-  color: black;
+/* Police Manrope (choisie par le client dans le questionnaire) */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
+/*
+  Couleurs utilisées (palette n°1 du client, sans CE2020) :
+  #3A4B49 : texte, menu, pied de page
+  #95A09F : bordures uniquement (jamais pour du texte)
+  #B8DFE0 : fonds de mise en valeur
+  #E34040 : trait sous l'en-tête uniquement (pas de texte)
+  #B80000 : couleur principale (titres, liens)
+  #FFFFFF : fond des pages
+
+  Classes à utiliser dans le HTML :
+  - Accueil (zoning 3) : .header-accueil (en plus de .header), .fil-ariane,
+    .carrousel, .slide, .titre-slide, .intro
+  - Pages (zoning 2) : .section, .colonne-texte, .bloc-texte, .image-section
+*/
+
+/* ===== général ===== */
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* permet de garder le pied de page en bas */
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3A4B49;
+  background-color: #FFFFFF;
+}
+
+/* Titres (tailles données dans le questionnaire) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3A4B49;
+}
+
+h1 {
+  font-size: 2.986rem;
+  color: #B80000;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+h5 {
+  font-size: 1.44rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.833rem;
+}
+
+/* Liens */
+a {
+  color: #B80000;
+}
+
+a:hover {
+  background-color: #B8DFE0;
+}
+
+/* Contour visible quand on navigue au clavier */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #B80000;
+  outline-offset: 2px;
+}
+/* Les images ne dépassent jamais de leur conteneur */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== entête ===== */
 .header {
   position: relative;
   display: flex;
   align-items: center;
+  min-height: 150px;
   padding: 1rem;
+  border-bottom: 3px solid #E34040;
 }
+
 .header h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);  /* compense la largeur du titre */
   margin: 0;
+  max-width: 50%; /* évite que le titre passe sur le logo */
+  padding: 0.25rem 1rem;
+  border: 1px solid #95A09F; /* le titre est dans un cadre (zoning 2) */
+  text-align: center;
 }
+
+/* logo dans l'en-tête */
+.content img {
+  float: left;
+  margin: 20px;
+}
+
+/* bouton du menu */
+#btnMenu {
+  background: #FFFFFF;
+  border: 1px solid #95A09F;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  color: #3A4B49;
+}
+#btnMenu:hover {
+  background: #B8DFE0;
+}
+#btnMenu svg {
+  display: block; /* enlève l'espace sous l'icône */
+}
+
+/* menu latéral */
 #menu {
   display: none;
   position: fixed;
@@ -31,10 +144,11 @@ width: 100% }
   left: 0;
   width: 280px;
   height: 100vh;
-  background: #222;
-  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+  background: #3A4B49;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4);
   z-index: 100;
   padding-top: 5rem;
+  overflow-y: auto;
 }
 #menu.open {
   display: block;
@@ -47,21 +161,211 @@ width: 100% }
 #menu a {
   display: block;
   padding: 0.8rem 1.5rem;
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 1.1rem;
 }
-
 #menu a:hover {
-  background: #444;
-}   
+  background: #B80000;
+}
+#menu a:focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: -3px;
+}
 #btnClose {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: none;
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 1.8rem;
   cursor: pointer;
-}   
+}
+#btnClose:hover {
+  color: #B8DFE0;
+}
+#btnClose:focus-visible {
+  outline: 3px solid #FFFFFF;
+}
+
+/* ===== page d'accueil (zoning 3) ===== */
+/* entête de l'accueil */
+.header-accueil .fil-ariane {
+  order: 1;
+}
+
+.header-accueil .content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-accueil #btnMenu {
+  order: 2;
+  margin-left: auto;
+}
+
+.fil-ariane {
+  margin: 0;
+  font-weight: 600;
+  color: #3A4B49;
+}
+
+/* Carrousel : on fait défiler les slides sur le côté */
+.carrousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+  border: 1px solid #95A09F;
+}
+
+.slide {
+  flex: 0 0 100%; /* une slide prend toute la largeur */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #B8DFE0;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.titre-slide {
+  flex-grow: 1; /* toutes les slides ont la même hauteur */
+  padding: 0.8rem 1rem;
+  background-color: #3A4B49;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.slide:hover .titre-slide {
+  background-color: #B80000;
+}
+
+.slide:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Texte de présentation sous le carrousel */
+.intro {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+}
+
+.intro h1 {
+  text-align: left;
+}
+
+/* ===== pages (zoning 2) ===== */
+
+/* Une partie : le texte à gauche, l'image à droite */
+.section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.colonne-texte {
+  flex: 1;
+}
+
+.colonne-texte h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Cadre autour du texte */
+.bloc-texte {
+  padding: 1.5rem;
+  border: 1px solid #95A09F;
+  text-align: center;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== pied de page ===== */
+footer {
+  margin-top: auto; /* pousse le pied de page en bas */
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #3A4B49;
+  color: #FFFFFF;
+  overflow: hidden; /* pour contenir l'image qui flotte */
+}
+footer img {
+  float: left;
+  margin-right: 10px;
+}
+footer a {
+  color: #B8DFE0;
+}
+footer a:hover {
+  color: #FFFFFF;
+  background-color: transparent;
+}
+footer a:focus-visible {
+  outline-color: #FFFFFF;
+}
+
+/* ===== Écrans moyens : le titre de l'en-tête passe à la ligne ===== */
+@media (max-width: 1024px) {
+  /* Le titre passe sous le bouton et le logo */
+  .header {
+    flex-wrap: wrap;
+  }
+  .header h1 {
+    position: static;
+    transform: none;
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* ===== Téléphone et tablette ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.074rem;
+  }
+  h2 {
+    font-size: 1.728rem;
+  }
+  h3 {
+    font-size: 1.44rem;
+  }
+  .carrousel {
+    margin-top: 1rem;
+  }
+  .slide img {
+    height: 180px;
+  }
+  .section {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .colonne-texte, .image-section {
+    width: 100%;
+  }
+  footer {
+    padding: 1rem;
+  }
+}
