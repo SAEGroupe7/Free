@@ -367,5 +367,6 @@ footer a:focus-visible {
   }
   footer {
     padding: 1rem;
+    width: 100%;
   }
 }
