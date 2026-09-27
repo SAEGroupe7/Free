@@ -1,4 +1,67 @@
+.content img{
+margin: 20px;}
+img {
+  float: left;
+  margin-right: 10px; /* espace entre l'image et le texte à sa droite */   
+}   
 footer { position: fixed; bottom: 1%;
-       width: 100%}
-img { float: left;
-    margin-right: 10px;}
+width: 100% }
+#btnMenu {
+  background: light-grey;
+  border: black;
+  cursor: pointer;
+  color: black;
+}
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  /* compense la largeur du titre */
+  margin: 0;
+}
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: #222;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+  z-index: 100;
+  padding-top: 5rem;
+}
+#menu.open {
+  display: block;
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+#menu a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#menu a:hover {
+  background: #444;
+}   
+#btnClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}   
