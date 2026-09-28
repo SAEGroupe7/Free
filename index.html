@@ -59,5 +59,19 @@
   </h2>
     <!--html ecrit par Doryann Gras-->
   <footer>Créé par : Doryann Gras</footer>
+
+        <script>
+        const btn = document.getElementById('btnMenu');
+        const btnClose = document.getElementById('btnClose');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+
+        btnClose.addEventListener('click', () => {
+            menu.classList.remove('open');
+        });
+    </script>
 </body>
 </html>
