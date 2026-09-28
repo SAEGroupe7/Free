@@ -1,3 +1,41 @@
+/* css pour index.html */
+ul.jester {
+  width: 100vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+}
+
+li.jester-item {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+li.jester-item:nth-child(even) {
+    background-color:#B80000
+}
+
+.titre {
+  font-size: 45px;
+  color: #B80000;
+}
+#icon {
+  position:fixed;
+  top:0%;
+  left:0%;
+  width: 25px;
+  height: auto;
+}
+
+
 /* Police Manrope (choisie par le client dans le questionnaire) */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
 
