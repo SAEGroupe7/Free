@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <title>Accueil</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <title>Accueil</title>
 </head>
+
 <body>
-    <h1>Accueil</h1>
-    <a href="page1/page1.html">page 1</a>
-    <br>
-    <a href="page2/page2.html">page 2</a>
-    <br>
-    <a href="page3/page3.html">page 3</a>
-    <br>
-    <a href="page4/page4.html">page 4</a>
-    <br>
-    <a href="page5/page5.html">page 5</a>
-    <br>
-    Le projet s'articule autour de l'entreprise Free, entreprise qui sera décrite avec son histoire,
-    ses différents produits, les services qu'elle propose, ses différents revenus (économie) et enfin son expansion en Euope.
-    <footer>Créé par : Doryann Gras</footer>
+      <header class="header">
+        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <nav id="menu">
+            <button type="button" id="btnClose" aria-label="Fermer le menu">×</button>
+            <a href="../index.html">Accueil</a>
+            <a href="../page4/page4.html">Histoire de l'entreprise</a>
+            <a href="../page2/page2.html">Services et produits</a>
+            <a href="page3.html">Présentation des produits et services</a>
+            <a href="../page1/page1.html">Économie</a>
+            <a href="../page5/page5.html">Expansion du groupe Iliad en Europe</a>
+        </nav>
+        <h1>placeholder</h1>
+        <div class="content">
+            <a href="../index.html"><img src="Free-main\Logo-de-Free-500x281.png" alt="Logo de Free"></a>
+        </div>
+    </header>
+
+  <h1 class="titre">Accueil</h1>
+
+  <ul class="jester">
+    <li class="jester-item" name="page1">
+      <h1> <a href="page1/page1.html">Économie</a> </h1>
+    </li>
+    <li class="jester-item"name="page2">
+      <h1> <a href="page2/page2.html">Services et produits</a> </h1>
+    </li>
+    <li class="jester-item" name="page3">
+      <h1> <a href="page3/page3.html">Présentation des produits et services</a> </h1>
+    </li>
+    <li name="page4">
+      <h1> <a href="page4/page4.html">Histoire de l'entreprise</a> </h1>
+    </li>
+    <li class="jester-item" name="page5">
+      <h1> <a href="page5/page5.html">Expansion du groupe Iliad en Europe</a> </h1>
+    </li>
+  </ul>
+  
+  <h2>
+    <div class="titre"> lorem Ipsum </div> Le projet s'articule autour de l'entreprise Free, entreprise qui sera décrite avec son histoire,
+    ses différents produits, les services qu'elle propose, ses différents revenus (économie) et enfin son expansion en Europe.
+  </h2>
+    <!--html ecrit par Doryann Gras-->
+  <footer>Créé par : Doryann Gras</footer>
 </body>
 </html>
