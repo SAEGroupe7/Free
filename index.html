@@ -70,6 +70,12 @@
         btnClose.addEventListener('click', () => {
             menu.classList.remove('open');
         });
+        
+        window.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !btn.contains(event.target)) {
+              menu.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
