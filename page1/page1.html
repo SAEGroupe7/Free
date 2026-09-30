@@ -40,7 +40,13 @@ btn.addEventListener('click', () => {
 
 btnClose.addEventListener('click', () => {
   menu.classList.remove('open');
-});   </script>
+});   
+ window.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !btn.contains(event.target)) {
+        menu.style.display = 'none';
+    }
+});
+</script>
     <footer> <img src="../Logo_équipe2.png" alt="Notre Logo"/>
 <br>
 <br>  Mail : <a href="mailto:nolan.fischer@edu.univ-fcomte.fr?subject=SAE_1_05_06"> nolan.fischer@edu.univ-fcomte.fr </a> 
