@@ -6,9 +6,52 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
     <title>Histoire de l'entreprise</title>
-</head>
+</head> 
 <body>
-    <h1>Histoire de l'entreprise</h1>
-    <footer>Créé par : Yanis Iklef</footer>
+    <header class="header">
+        
+        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <h1>Histoire de l'entreprise</h1>
+        <nav id="menu">
+            <button type="button" id="btnClose" aria-label="Fermer le menu">×</button>
+            <a href="../index.html">Accueil</a>
+            <a href="../page4/page4.html">Histoire de l'entreprise</a>
+            <a href="../page2/page2.html">Services et produits</a>
+            <a href="page3.html">Présentation des produits et services</a>
+            <a href="../page1/page1.html">Économie</a>
+            <a href="../page5/page5.html">Expansion du groupe Iliad en Europe</a>
+        </nav>
+        
+        <div class="content">
+            <a href="../index.html"><img src="../Logo-de-Free-500x281.png" alt="Logo de Free"></a>
+        </div>
+    </header>
+   
+    
+     <footer>
+        <img src="../Logo_équipe2.png" alt="Logo de notre équipe">
+        <br>
+        <br>Mail : <a href="mailto:yanis.iklef@edu.univ-fcomte.fr?subject=SAE_1_05_06">yanis.iklef@edu.univ-fcomte.fr</a>
+        <br>Créé par : Yanis Iklef, membre des 5 Webmasters
+    </footer>
+      <script>
+        const btn = document.getElementById('btnMenu');
+        const btnClose = document.getElementById('btnClose');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+
+        btnClose.addEventListener('click', () => {
+            menu.classList.remove('open');
+        });
+    </script>
 </body>
 </html>
