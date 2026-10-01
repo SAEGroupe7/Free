@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../menu.js" defer></script>
     <title>Histoire de l'entreprise</title>
 </head> 
 <body>
@@ -18,15 +19,7 @@
             </svg>
         </button>
         <h1>Histoire de l'entreprise</h1>
-        <nav id="menu">
-            <button type="button" id="btnClose" aria-label="Fermer le menu">×</button>
-            <a href="../index.html">Accueil</a>
-            <a href="../page4/page4.html">Histoire de l'entreprise</a>
-            <a href="../page2/page2.html">Services et produits</a>
-            <a href="../page3/page3.html">Présentation des produits et services</a>
-            <a href="../page1/page1.html">Économie</a>
-            <a href="../page5/page5.html">Expansion du groupe Iliad en Europe</a>
-        </nav>
+        <nav id="menu"></nav>
         
         <div class="content">
             <a href="../index.html"><img src="../Logo-de-Free-500x281.png" alt="Logo de Free"></a>
@@ -40,24 +33,5 @@
         <br>Mail : <a href="mailto:yanis.iklef@edu.univ-fcomte.fr?subject=SAE_1_05_06">yanis.iklef@edu.univ-fcomte.fr</a>
         <br>Créé par : Yanis Iklef, membre des 5 Webmasters
     </footer>
-      <script>
-        const btn = document.getElementById('btnMenu');
-        const btnClose = document.getElementById('btnClose');
-        const menu = document.getElementById('menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-
-        btnClose.addEventListener('click', () => {
-            menu.classList.remove('open');
-        });
-        
-        window.addEventListener('click', (event) => {
-            if (!menu.contains(event.target) && !btn.contains(event.target)) {
-              menu.classList.remove('open');
-            }
-        });
-    </script>
 </body>
 </html>

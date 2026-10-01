@@ -176,7 +176,6 @@ img {
 
 /* menu latéral */
 #menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -187,14 +186,19 @@ img {
   z-index: 100;
   padding-top: 5rem;
   overflow-y: auto;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0s 0.3s;
 }
 #menu.open {
-  display: block;
-  animation: slideIn 0.3s ease;
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease;
 }
-@keyframes slideIn {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) {
+  #menu, #menu.open {
+    transition: none;
+  }
 }
 #menu a {
   display: block;

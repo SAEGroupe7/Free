@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../menu.js" defer></script>
     <title>Économie</title>
 </head>
 <body>
@@ -16,37 +17,12 @@
     <line x1="3" y1="18" x2="21" y2="18"/>
   </svg>
 </button>
-  <nav id="menu">
-   <button id="btnClose">×</button>
-  <a href="../index.html">Accueil</a>
-  <a href="../page2/page2.html">Services et produits</a>
-  <a href="../page3/page3.html">Présentation des produits et services</a>
-  <a href="../page4/page4.html">Histoire</a>
-  <a href="../page5/page5.html">Expansion du groupe en Europe</a>
-</nav>
+  <nav id="menu"></nav>
   <h1>Economie</h1>
 <div class="content">
 <img src="../Logo-de-Free-500x281.png">
 </div>
 </header>
-<script>
-const btn = document.getElementById('btnMenu');
-const btnClose = document.getElementById('btnClose');
-const menu = document.getElementById('menu');
-
-btn.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
-btnClose.addEventListener('click', () => {
-  menu.classList.remove('open');
-});   
- window.addEventListener('click', (event) => {
-    if (!menu.contains(event.target) && !btn.contains(event.target)) {
-        menu.classList.remove('open');
-    }
-});
-</script>
     <footer> <img src="../Logo_équipe2.png" alt="Notre Logo"/>
 <br>
 <br>  Mail : <a href="mailto:nolan.fischer@edu.univ-fcomte.fr?subject=SAE_1_05_06"> nolan.fischer@edu.univ-fcomte.fr </a> 
