@@ -19,8 +19,10 @@ li.jester-item {
   scroll-snap-align: center;
 }
 
-li.jester-item:nth-child(even) {
-    background-color:#B80000
+li.jester-item {
+    background-image: url('../Free-main/img/image-temporaire.png');
+    background-size: length;
+    background-position: center;
 }
 
 .titre {
@@ -33,6 +35,15 @@ li.jester-item:nth-child(even) {
   left:0%;
   width: 25px;
   height: auto;
+}
+
+h1.title {
+  font-size: 45px;
+  color: #B80000;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #95A09F;
+  border-radius: 5px;
 }
 
 
@@ -208,7 +219,8 @@ img {
   font-size: 1.1rem;
 }
 #menu a:hover {
-  background: #B80000;
+  color: #3A4B49;
+  background: #E34040;
 }
 #menu a:focus-visible {
   outline: 3px solid #FFFFFF;
