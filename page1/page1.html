@@ -43,7 +43,7 @@ btnClose.addEventListener('click', () => {
 });   
  window.addEventListener('click', (event) => {
     if (!menu.contains(event.target) && !btn.contains(event.target)) {
-        menu.style.display = 'none';
+        menu.classList.remove('open');
     }
 });
 </script>

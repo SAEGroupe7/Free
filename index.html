@@ -51,14 +51,17 @@
     </li>
   </ul>
   
-  <h2>
-    <div class="titre"> lorem Ipsum </div> Le projet s'articule autour de l'entreprise Free, entreprise qui sera décrite avec son histoire,
-    ses différents produits, les services qu'elle propose, ses différents revenus (économie) et enfin son expansion en Europe.
-  </h2>
+  <main>
+    <!-- Texte de présentation sous le carrousel (zoning 3) -->
+    <section class="intro">
+      <h1>Bienvenue sur le site web qui présente Free</h1>
+      <p>Le projet s'articule autour de l'entreprise Free, entreprise qui sera décrite avec son histoire,
+      ses différents produits, les services qu'elle propose, ses différents revenus (économie) et enfin son expansion en Europe.</p>
+    </section>
+  </main>
     <!--html ecrit par Doryann Gras-->
   <footer>Créé par : Doryann Gras</footer>
-
-        <script>
+    <script>
         const btn = document.getElementById('btnMenu');
         const btnClose = document.getElementById('btnClose');
         const menu = document.getElementById('menu');
@@ -73,7 +76,7 @@
         
         window.addEventListener('click', (event) => {
             if (!menu.contains(event.target) && !btn.contains(event.target)) {
-              menu.style.display = 'none';
+              menu.classList.remove('open');
             }
         });
     </script>

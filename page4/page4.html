@@ -23,7 +23,7 @@
             <a href="../index.html">Accueil</a>
             <a href="../page4/page4.html">Histoire de l'entreprise</a>
             <a href="../page2/page2.html">Services et produits</a>
-            <a href="page3.html">Présentation des produits et services</a>
+            <a href="../page3/page3.html">Présentation des produits et services</a>
             <a href="../page1/page1.html">Économie</a>
             <a href="../page5/page5.html">Expansion du groupe Iliad en Europe</a>
         </nav>
@@ -55,7 +55,7 @@
         
         window.addEventListener('click', (event) => {
             if (!menu.contains(event.target) && !btn.contains(event.target)) {
-              menu.style.display = 'none';
+              menu.classList.remove('open');
             }
         });
     </script>
