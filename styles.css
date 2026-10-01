@@ -5,7 +5,7 @@ ul.jester {
   padding: 20px;
   display: flex;
   gap: 4vw;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
 
 }
@@ -14,6 +14,7 @@ li.jester-item {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
+  border-radius: 10px;
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
@@ -128,7 +129,7 @@ a {
 }
 
 a:hover {
-  background-color: #B8DFE0;
+  color:#E34040;
 }
 
 /* Contour visible quand on navigue au clavier */
