@@ -5,7 +5,7 @@ ul.jester {
   padding: 20px;
   display: flex;
   gap: 4vw;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
 
 }
@@ -14,13 +14,16 @@ li.jester-item {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
+  border-radius: 10px;
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
 }
 
-li.jester-item:nth-child(even) {
-    background-color:#B80000
+li.jester-item {
+    background-image: url('../Free-main/img/image-temporaire.png');
+    background-size: length;
+    background-position: center;
 }
 
 .titre {
@@ -33,6 +36,15 @@ li.jester-item:nth-child(even) {
   left:0%;
   width: 25px;
   height: auto;
+}
+
+h1.title {
+  font-size: 45px;
+  color: #B80000;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #95A09F;
+  border-radius: 5px;
 }
 
 
@@ -117,7 +129,7 @@ a {
 }
 
 a:hover {
-  background-color: #B8DFE0;
+  color:#E34040;
 }
 
 /* Contour visible quand on navigue au clavier */
@@ -208,7 +220,8 @@ img {
   font-size: 1.1rem;
 }
 #menu a:hover {
-  background: #B80000;
+  color: #3A4B49;
+  background: #E34040;
 }
 #menu a:focus-visible {
   outline: 3px solid #FFFFFF;
