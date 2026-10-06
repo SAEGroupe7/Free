@@ -350,12 +350,12 @@ img {
 /* Une partie : le texte à gauche, l'image à droite */
 .section {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .colonne-texte {
@@ -376,7 +376,11 @@ img {
 
 .image-section {
   flex: 1;
-  min-width: 0;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
 /* ===== pied de page ===== */
