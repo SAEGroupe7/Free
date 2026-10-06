@@ -447,3 +447,18 @@ footer a:focus-visible {
     width: 100%;
   }
 }
+.intro-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #B8DFE0;
+  border-left: 5px solid #B80000;
+  border-radius: 5px;
+}
+
+.intro-page p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
