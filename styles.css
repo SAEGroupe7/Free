@@ -376,11 +376,24 @@ img {
 
 .image-section {
   flex: 1;
+  min-width: 0;
+  margin: auto;
+}
+
+.image-section img {
+  display: block;
   width: 100%;
   max-width: 550px;
   height: auto;
-  display: block;
   margin: auto;
+}
+
+.legende-image {
+  max-width: 550px;
+  margin: 0.75rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #3A4B49;
 }
 
 /* ===== pied de page ===== */
