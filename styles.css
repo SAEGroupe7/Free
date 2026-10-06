@@ -493,3 +493,22 @@ footer a:focus-visible {
 .intro-section p {
   margin-top: 0;
 }
+.conclusion-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #B8DFE0;
+  border-top: 4px solid #B80000;
+  border-radius: 5px;
+}
+
+.conclusion-page h2 {
+  margin-top: 0;
+  color: #B80000;
+  text-align: center;
+}
+
+.conclusion-page p {
+  line-height: 1.7;
+}
