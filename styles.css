@@ -251,9 +251,7 @@ img {
 }
 
 .header-accueil .content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
 }
 
 .header-accueil #btnMenu {
