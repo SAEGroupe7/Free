@@ -14,40 +14,19 @@ const liens = [
   { href: "page5/page5.html", texte: "Expansion du groupe Iliad en Europe" },
 ];
 
-const racine = document.currentScript.src;  // dossier racine
-
+const racine = document.currentScript.src;
+const page = location.href.split('#')[0];
 const btn = document.getElementById('btnMenu');
 const menu = document.getElementById('menu');
 
-// création du bouton pour fermer le menu
-const btnClose = document.createElement('button');
-btnClose.type = 'button';
-btnClose.id = 'btnClose';
-btnClose.setAttribute('aria-label', 'Fermer le menu');
-btnClose.textContent = '×';
-menu.appendChild(btnClose);
-
-liens.forEach((lien) => {
-  const a = document.createElement('a');
-  a.href = new URL(lien.href, racine).href;
-  a.textContent = lien.texte;
-  if (a.href === location.href.split('#')[0]) {
-    a.setAttribute('aria-current', 'page');
-  }
-  menu.appendChild(a);
-});
-
-btn.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
-btnClose.addEventListener('click', () => {
-  menu.classList.remove('open');
-});
-
-// ferme le menu quand on clique en dehors (merci Doryann)
-window.addEventListener('click', (event) => {
-  if (!menu.contains(event.target) && !btn.contains(event.target)) {
-    menu.classList.remove('open');
-  }
+menu.innerHTML =
+  '<button type="button" id="btnClose" aria-label="Fermer le menu">×</button>' +
+  liens.map(({ href, texte }) => {
+    const url = new URL(href, racine).href;
+    return `<a href="${url}"${url === page ? ' aria-current="page"' : ''}>${texte}</a>`;
+  }).join('');
+/* Ferme le menu quand on clicke à côté */
+document.addEventListener('click', (e) => {
+  if (btn.contains(e.target)) menu.classList.toggle('open');
+  else if (e.target.closest('#btnClose') || !menu.contains(e.target)) menu.classList.remove('open');
 });
