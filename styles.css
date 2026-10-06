@@ -165,13 +165,22 @@ img {
 }
 
 /* logo dans l'en-tête */
-.content img {
-  float: left;
-  margin: 20px;
+.header .content {
+  order: 1;
+}
+
+.header .content img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0;
 }
 
 /* bouton du menu */
 #btnMenu {
+  order: 2;
+  margin-left: auto;
+
   background: #FFFFFF;
   border: 1px solid #95A09F;
   border-radius: 4px;
