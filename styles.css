@@ -178,18 +178,33 @@ img {
 
 /* bouton du menu */
 #btnMenu {
-  order: 2;
-  margin-left: auto;
-
-  background: #FFFFFF;
-  border: 1px solid #95A09F;
-  border-radius: 4px;
-  padding: 4px;
-  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #3A4B49;
+  border-radius: 50%;
+  background-color: #FFFFFF;
   color: #3A4B49;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
 #btnMenu:hover {
-  background: #B8DFE0;
+  background-color: #3A4B49;
+  color: #FFFFFF;
+  transform: scale(1.05);
 }
 #btnMenu svg {
   display: block; /* enlève l'espace sous l'icône */
