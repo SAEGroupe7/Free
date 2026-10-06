@@ -462,3 +462,17 @@ footer a:focus-visible {
   font-size: 1.05rem;
   line-height: 1.7;
 }
+.intro-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.intro-section h2 {
+  margin-bottom: 0.5rem;
+  color: #B80000;
+}
+
+.intro-section p {
+  margin-top: 0;
+}
