@@ -183,8 +183,9 @@ img {
   border: 2px solid #3A4B49;
   border-radius: 50%;
   background-color: #FFFFFF;
-  color: #3A4B49;
+  color: #B80000;
   cursor: pointer;
+  margin-right: 20px;
 
   display: flex;
   align-items: center;
@@ -200,9 +201,8 @@ img {
     color 0.2s ease,
     transform 0.2s ease;
 }
-
 #btnMenu:hover {
-  background-color: #3A4B49;
+  background-color: #B80000;
   color: #FFFFFF;
   transform: scale(1.05);
 }
