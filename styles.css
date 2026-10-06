@@ -206,10 +206,6 @@ img {
   color: #FFFFFF;
   transform: scale(1.05);
 }
-#btnMenu svg {
-  display: block; /* enlève l'espace sous l'icône */
-}
-
 /* menu latéral */
 #menu {
   position: fixed;
