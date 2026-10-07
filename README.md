@@ -14,6 +14,7 @@ sous un angle économique (chiffre d'affaires, effectifs), ainsi que sous d'autr
 ### page1.html :  
 **Auteur :** Nolan Fischer  
 **Utilité :** Économie 
+
 **Lien vers le résultat de conformité de la page 1 :** https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage1%2Fpage1.html
 
 **Lien vers la validation d'éco-conception :** https://www.ecoindex.fr/resultat/?id=44940a11-d936-4030-811c-17647a406b5f
