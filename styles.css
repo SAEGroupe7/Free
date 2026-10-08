@@ -1,3 +1,6 @@
+/* Police Manrope | L'import doit rester tout en haut du fichier, sinon le navigateur l'ignore. */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
 /* css pour index.html */
 ul.jester {
   width: 100vw;
@@ -46,10 +49,6 @@ h1.title {
   background-color: #95A09F;
   border-radius: 5px;
 }
-
-
-/* Police Manrope (choisie par le client dans le questionnaire) */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
 
 /*
   Couleurs utilisées (palette n°1 du client, sans CE2020) :
@@ -511,4 +510,31 @@ footer a:focus-visible {
 
 .conclusion-page p {
   line-height: 1.7;
+}
+
+/* Une section sur deux a son image à gauche (disposition « tondeuse à gazon »).
+   Dans le HTML le texte reste avant l'image : sur téléphone, on lit donc toujours
+   le titre, puis le texte, puis l'image. */
+@media (min-width: 769px) {
+  .section-inversee {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Sources en bas de page */
+.sources {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  font-size: 0.833rem;
+}
+
+.sources h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.44rem;
+}
+
+.sources ul {
+  margin: 0;
+  padding-left: 1.2rem;
 }
