@@ -408,3 +408,8 @@ footer a:focus-visible {
     width: 100%;
   }
 }
+.ariane { padding: 10px 20px 0; font-size: 0.9rem; }
+.ariane ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+.ariane li + li::before { content: ">"; margin-right: 8px; color: #95A09F; }
+.ariane li[aria-current="page"] { color: #B80000; font-weight: 500; }
+
