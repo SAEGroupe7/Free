@@ -34,30 +34,30 @@ li.jester-item:hover {
 }
 
 #jes1 {
-  background-image: url('../Free-main/img/img_jes-1.png');
+  background-image: url('img/img_jes-1.png');
   background-size: cover;
 }
 
 #jes2 {
-  background-image: url('../Free-main/img/img_jes-2.png');
+  background-image: url('img/img_jes-2.png');
   background-size: auto;
 }
 
 #jes3 {
-  background-image: url('../Free-main/img/img_jes-3.jpg');
+  background-image: url('img/img_jes-3.jpg');
   background-size: cover;
   background-position: left ;
 }
 
 #jes4 {
 
-  background-image: url('../Free-main/img/img_jes-4.jpg');
+  background-image: url('img/img_jes-4.jpg');
   background-size: cover;
   background-position: left bottom ;
 }
 
 #jes5 {
-  background-image: url('../Free-main/img/img_jes-5.jpg');
+  background-image: url('img/img_jes-5.jpg');
   background-size: cover;
 }
 
