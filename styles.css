@@ -1,26 +1,150 @@
+/* Police Manrope | L'import doit rester tout en haut du fichier, sinon le navigateur l'ignore. */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
 /* css pour index.html */
 ul.jester {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 380px;
   padding: 20px;
   display: flex;
   gap: 4vw;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
+  position: relative; /* repère pour le calcul des positions dans carrousel.js */
+  margin-bottom: 0;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth; /* la slide se remet en place en douceur quand on la lâche */
+}
 
+/* Pendant un cliquer-glisser à la souris (classe ajoutée par carrousel.js) */
+ul.jester.glisse {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+ul.jester.glisse, ul.jester.glisse a {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ul.jester {
+    scroll-behavior: auto;
+  }
 }
 
 li.jester-item {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
+  border-radius: 10px;
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
+  position: relative;
+  overflow: hidden; /* coupe l'image agrandie au survol */
+  isolation: isolate; /* garde l'image (z-index: -1) derrière le texte mais devant le fond de la slide */
 }
 
-li.jester-item:nth-child(even) {
-    background-color:#B80000
+/* Copie de l'image de fond de la slide, agrandie au survol.
+   On agrandit l'image et pas la slide : une slide plus large que le carrousel
+   empêcherait l'aimantation et le défilement aux flèches du clavier. */
+li.jester-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  transition: transform 0.3s ease;
+}
+
+/* Toute la slide est cliquable, pas seulement le titre : le lien recouvre la slide */
+li.jester-item a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Fond blanc translucide derrière le titre : le rouge reste lisible sur les photos sombres */
+li.jester-item h1 > a {
+  display: inline-block;
+  padding: 0.1em 0.45em 0.15em;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+li.jester-item {
+    background-size: length;
+    background-position: center;
+}
+/* Pas d'effet de survol sur les écrans tactiles : il resterait bloqué après un appui */
+@media (hover: hover) {
+  li.jester-item:hover::before {
+    transform: scale(1.05);
+  }
+}
+
+/* Images du carrousel : photos de Wikimedia Commons, crédits en bas de index.html.
+   background-position règle la partie de la photo visible dans le bandeau. */
+#jes1, #jes2, #jes3, #jes4, #jes5 {
+  background-size: cover;
+}
+
+#jes1 {
+  background-image: url('img/img_jes-1.jpg');
+  background-position: center 35%;
+}
+
+#jes2 {
+  background-image: url('img/img_jes-2.jpg');
+  background-position: center 70%;
+}
+
+#jes3 {
+  background-image: url('img/img_jes-3.jpg');
+  background-position: center;
+}
+
+#jes4 {
+  background-image: url('img/img_jes-4.jpg');
+  background-position: center;
+}
+
+#jes5 {
+  background-image: url('img/img_jes-5.jpg');
+  background-position: center 45%;
+}
+
+/* Ronds de navigation du carrousel (créés par carrousel.js) */
+.jester-points {
+  display: flex;
+  justify-content: center;
+}
+
+.jester-points button {
+  /* zone cliquable plus grande que le rond, pour le tactile */
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.jester-points button::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.jester-points button[aria-current="true"]::before {
+  background-color: black;
 }
 
 .titre {
@@ -35,9 +159,14 @@ li.jester-item:nth-child(even) {
   height: auto;
 }
 
-
-/* Police Manrope (choisie par le client dans le questionnaire) */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+h1.title {
+  font-size: 45px;
+  color: #B80000;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #95A09F;
+  border-radius: 5px;
+}
 
 /*
   Couleurs utilisées (palette n°1 du client, sans CE2020) :
@@ -82,6 +211,9 @@ h1 {
   font-size: 2.986rem;
   color: #B80000;
 }
+h1 > a {
+  color: inherit;
+}
 
 h2 {
   font-size: 2.488rem;
@@ -117,7 +249,7 @@ a {
 }
 
 a:hover {
-  background-color: #B8DFE0;
+  color:#E34040;
 }
 
 /* Contour visible quand on navigue au clavier */
@@ -153,30 +285,49 @@ img {
 }
 
 /* logo dans l'en-tête */
-.content img {
-  float: left;
-  margin: 20px;
+.header .content {
+  order: 1;
+}
+
+.header .content img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0;
 }
 
 /* bouton du menu */
 #btnMenu {
-  background: #FFFFFF;
-  border: 1px solid #95A09F;
-  border-radius: 4px;
-  padding: 4px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #3A4B49;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #B80000;
   cursor: pointer;
-  color: #3A4B49;
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 #btnMenu:hover {
-  background: #B8DFE0;
+  background-color: #B80000;
+  color: #FFFFFF;
+  transform: scale(1.05);
 }
-#btnMenu svg {
-  display: block; /* enlève l'espace sous l'icône */
-}
-
 /* menu latéral */
 #menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -187,14 +338,19 @@ img {
   z-index: 100;
   padding-top: 5rem;
   overflow-y: auto;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0s 0.3s;
 }
 #menu.open {
-  display: block;
-  animation: slideIn 0.3s ease;
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease;
 }
-@keyframes slideIn {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) {
+  #menu, #menu.open {
+    transition: none;
+  }
 }
 #menu a {
   display: block;
@@ -204,7 +360,8 @@ img {
   font-size: 1.1rem;
 }
 #menu a:hover {
-  background: #B80000;
+  color: #3A4B49;
+  background: #E34040;
 }
 #menu a:focus-visible {
   outline: 3px solid #FFFFFF;
@@ -234,9 +391,7 @@ img {
 }
 
 .header-accueil .content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
 }
 
 .header-accueil #btnMenu {
@@ -249,6 +404,10 @@ img {
   font-weight: 600;
   color: #3A4B49;
 }
+.ariane { padding: 10px 20px 0; font-size: 0.9rem; }
+.ariane ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+.ariane li + li::before { content: ">"; margin-right: 8px; color: #95A09F; }
+.ariane li[aria-current="page"] { color: #B80000; font-weight: 500; }
 
 /* Carrousel : on fait défiler les slides sur le côté */
 .carrousel {
@@ -311,12 +470,12 @@ img {
 /* Une partie : le texte à gauche, l'image à droite */
 .section {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .colonne-texte {
@@ -338,6 +497,23 @@ img {
 .image-section {
   flex: 1;
   min-width: 0;
+  margin: auto;
+}
+
+.image-section img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin: auto;
+}
+
+.legende-image {
+  max-width: 550px;
+  margin: 0.75rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #3A4B49;
 }
 
 /* ===== pied de page ===== */
@@ -412,4 +588,7 @@ footer a:focus-visible {
 .ariane ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
 .ariane li + li::before { content: ">"; margin-right: 8px; color: #95A09F; }
 .ariane li[aria-current="page"] { color: #B80000; font-weight: 500; }
+
+
+
 

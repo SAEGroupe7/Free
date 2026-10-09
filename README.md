@@ -13,7 +13,15 @@ sous un angle économique (chiffre d'affaires, effectifs), ainsi que sous d'autr
 **Utilité :** Accueil, page servant à accéder aux autres  
 ### page1.html :  
 **Auteur :** Nolan Fischer  
-**Utilité :** Économie  
+**Utilité :** Économie 
+
+**Lien vers le résultat de conformité de la page 1 :** [https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage1%2Fpage1.html
+](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage1%2Fpage1.html)
+
+**Lien vers la validation d'éco-conception :** [[https://www.ecoindex.fr/resultat/?id=94b1596c-9168-45f0-89f7-fcb266d9dd1b](https://www.ecoindex.fr/resultat/?id=ddd5f841-d90f-487a-a786-44065bb39764)]
+
+**La page et les vérifications ont été faites par Nolan FISCHER.**
+
 ### page2.html :  
 **Auteur :** Ilyana Gueraouni  
 **Utilité :** Service et produit  
