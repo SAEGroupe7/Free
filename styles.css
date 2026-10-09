@@ -429,3 +429,60 @@ footer a:focus-visible {
     width: 100%;
   }
 }
+
+
+/* ===== FRISE CHRONOLOGIQUE ===== */
+
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ligne verticale centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #B80000;
+    transform: translateX(-50%);
+}
+
+/* Chaque événement */
+.event {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+/* Point sur la ligne */
+.event-dot {
+    grid-column: 2;
+    width: 18px;
+    height: 18px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    justify-self: center;
+    z-index: 2;
+}
+
+/* Alternance gauche/droite */
+.event:nth-child(odd) .event-text { grid-column: 1; }
+.event:nth-child(odd) .event-figure { grid-column: 3; }
+
+.event:nth-child(even) .event-text { grid-column: 3; }
+.event:nth-child(even) .event-figure { grid-column: 1; }
+
+
