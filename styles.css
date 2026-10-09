@@ -66,6 +66,14 @@ li.jester-item a::after {
   inset: 0;
 }
 
+/* Fond blanc translucide derrière le titre : le rouge reste lisible sur les photos sombres */
+li.jester-item h1 > a {
+  display: inline-block;
+  padding: 0.1em 0.45em 0.15em;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 li.jester-item {
     background-size: length;
     background-position: center;
@@ -77,32 +85,35 @@ li.jester-item {
   }
 }
 
-#jes1 {
-  background-image: url('img/img_jes-1.png');
+/* Images du carrousel : photos de Wikimedia Commons, crédits en bas de index.html.
+   background-position règle la partie de la photo visible dans le bandeau. */
+#jes1, #jes2, #jes3, #jes4, #jes5 {
   background-size: cover;
 }
 
+#jes1 {
+  background-image: url('img/img_jes-1.jpg');
+  background-position: center 35%;
+}
+
 #jes2 {
-  background-image: url('img/img_jes-2.png');
-  background-size: auto;
+  background-image: url('img/img_jes-2.jpg');
+  background-position: center 70%;
 }
 
 #jes3 {
   background-image: url('img/img_jes-3.jpg');
-  background-size: cover;
-  background-position: left ;
+  background-position: center;
 }
 
 #jes4 {
-
   background-image: url('img/img_jes-4.jpg');
-  background-size: cover;
-  background-position: left bottom ;
+  background-position: center;
 }
 
 #jes5 {
   background-image: url('img/img_jes-5.jpg');
-  background-size: cover;
+  background-position: center 45%;
 }
 
 /* Ronds de navigation du carrousel (créés par carrousel.js) */
@@ -202,7 +213,6 @@ h1 {
 }
 h1 > a {
   color: inherit;
-  text-shadow: 1px 1px 3px #FFF;
 }
 
 h2 {
