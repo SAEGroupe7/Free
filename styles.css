@@ -200,6 +200,10 @@ h1 {
   font-size: 2.986rem;
   color: #B80000;
 }
+h1 > a {
+  color: inherit;
+  text-shadow: 1px 1px 3px #FFF;
+}
 
 h2 {
   font-size: 2.488rem;
