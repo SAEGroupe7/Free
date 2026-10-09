@@ -3,12 +3,13 @@
 
 /* css pour index.html */
 ul.jester {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 380px;
   padding: 20px;
   display: flex;
   gap: 4vw;
     overflow-x: auto;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
 
 }
@@ -24,9 +25,69 @@ li.jester-item {
 }
 
 li.jester-item {
-    background-image: url('../Free-main/img/image-temporaire.png');
     background-size: length;
     background-position: center;
+}
+li.jester-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+#jes1 {
+  background-image: url('../Free-main/img/img_jes-1.png');
+  background-size: cover;
+}
+
+#jes2 {
+  background-image: url('../Free-main/img/img_jes-2.png');
+  background-size: auto;
+}
+
+#jes3 {
+  background-image: url('../Free-main/img/img_jes-3.jpg');
+  background-size: cover;
+  background-position: left ;
+}
+
+#jes4 {
+
+  background-image: url('../Free-main/img/img_jes-4.jpg');
+  background-size: cover;
+  background-position: left bottom ;
+}
+
+#jes5 {
+  background-image: url('');
+  background-size: cover;
+}
+
+ul {
+  scroll-marker-group: after;
+}
+
+ul::scroll-marker-group {
+  position-anchor: jester-item bottom;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+li::scroll-marker {
+  content: attr(data-accName);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+
+li::scroll-marker:target-current {
+  background-color: black;
 }
 
 .titre {
