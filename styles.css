@@ -11,7 +11,27 @@ ul.jester {
     overflow-x: auto;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+  position: relative; /* repère pour le calcul des positions dans carrousel.js */
+  margin-bottom: 0;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth; /* la slide se remet en place en douceur quand on la lâche */
+}
 
+/* Pendant un cliquer-glisser à la souris (classe ajoutée par carrousel.js) */
+ul.jester.glisse {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+ul.jester.glisse, ul.jester.glisse a {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ul.jester {
+    scroll-behavior: auto;
+  }
 }
 
 li.jester-item {
@@ -22,15 +42,39 @@ li.jester-item {
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
+  position: relative;
+  overflow: hidden; /* coupe l'image agrandie au survol */
+  isolation: isolate; /* garde l'image (z-index: -1) derrière le texte mais devant le fond de la slide */
+}
+
+/* Copie de l'image de fond de la slide, agrandie au survol.
+   On agrandit l'image et pas la slide : une slide plus large que le carrousel
+   empêcherait l'aimantation et le défilement aux flèches du clavier. */
+li.jester-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  transition: transform 0.3s ease;
+}
+
+/* Toute la slide est cliquable, pas seulement le titre : le lien recouvre la slide */
+li.jester-item a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 li.jester-item {
     background-size: length;
     background-position: center;
 }
-li.jester-item:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+/* Pas d'effet de survol sur les écrans tactiles : il resterait bloqué après un appui */
+@media (hover: hover) {
+  li.jester-item:hover::before {
+    transform: scale(1.05);
+  }
 }
 
 #jes1 {
@@ -61,32 +105,34 @@ li.jester-item:hover {
   background-size: cover;
 }
 
-ul {
-  scroll-marker-group: after;
-}
-
-ul::scroll-marker-group {
-  position-anchor: jester-item bottom;
-  top: calc(anchor(bottom) - 70px);
-  justify-self: anchor-center;
-
+/* Ronds de navigation du carrousel (créés par carrousel.js) */
+.jester-points {
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
-li::scroll-marker {
-  content: attr(data-accName);
+.jester-points button {
+  /* zone cliquable plus grande que le rond, pour le tactile */
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.jester-points button::before {
+  content: "";
+  display: block;
   width: 16px;
   height: 16px;
-  background-color: transparent;
+  margin: auto;
   border: 2px solid black;
   border-radius: 50%;
-  overflow: hidden;
-  text-indent: 16px;
 }
 
-li::scroll-marker:target-current {
+.jester-points button[aria-current="true"]::before {
   background-color: black;
 }
 

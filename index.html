@@ -3,31 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <script src="menu.js" defer></script>
+  <script src="carrousel.js" defer></script>
   <title>Accueil</title>
 </head>
 
 <body>
   <!--entête-->
-      <header class="header">
-        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-        </button>
-        <nav id="menu"></nav>
-        <h1>Accueil</h1>
-        <div class="content">
-            <a href="index.html"><img src="img/Logo-de-Free-500x281.png" alt="Logo de Free"></a>
-        </div>
-    </header>
-<!--caroussel-->
-  <ul class="jester">
+  <header class="header">
+      <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+          <span>MENU</span>
+      </button>
+      <nav id="menu"></nav>
+      <h1>Accueil</h1>
+      <div class="content">
+          <a href="index.html"><img src="img/Logo-de-Free-500x281.png" alt="Logo de Free"></a>
+      </div>
+  </header>
+  <!--caroussel-->
+  <ul class="jester dragscroll">
     <li class="jester-item" id="jes1" name="page1">
       <h1> <a href="page1/page1.html" style="text-decoration:none">Économie</a> </h1>
     </li>
