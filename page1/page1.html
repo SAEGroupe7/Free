@@ -10,117 +10,383 @@
 </head>
 <body>
     <!-- En-tête : bouton du menu, logo et titre de la page (zoning 2) -->
-    <header class="header">
-        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-        </button>
-        <nav id="menu"></nav>
-        <h1>Economie</h1>
-        <div class="content">
-            <a href="../index.html"><img src="../img/Logo-de-Free-500x281.png" alt="Logo de Free"></a>
-        </div>
-    </header>
-    <p>Free est une entreprise telecom connue pour avoir renversé les tendances quand le nombre d'opérateurs ne s'élevait encore qu'à 3. Leur stratégie de guerre des prix a complètement boulversé les stratégies des opérateurs internet. Ces éléments vont être étudiés dans cette page.</p>
-    <h1>Les parts de marché de Free</h1>
-    <br>
-    <p>Cette partie s'articule autour des parts de marché de Free sur l'internet fixe et mobile.</p>
+   <!-- En-tête : bouton du menu, logo et titre de la page -->
+<header class="header">
+
+   <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+    <span>MENU</span>
+</button>
+
+    <nav id="menu"></nav>
+
+    <h1>Economie</h1>
+
+    <div class="content">
+        <a href="../index.html">
+            <img src="../img/Logo-de-Free-500x281.png" alt="Logo de Free">
+        </a>
+    </div>
+
+</header>
+   <div class="intro-page">
+    <p>
+        Free est aujourd'hui l'un des principaux opérateurs télécoms en France.
+        Depuis son arrivée sur le marché en 1999, l'entreprise a profondément
+        transformé le secteur en employant une politique tarifaire agressive et à des
+        offres sans engagement. Cette page nous permet donc d'étudier sa place sur les
+        marchés fixe et mobile, l'évolution de son activité économique et enfin
+        son développement à l'échelle européenne.
+    </p>
+</div>
+<section class="intro-section">
+    <h2>Les parts de marché de Free</h2>
+    <p>
+        Pour commencer, nous allons analyser la position de Free sur le marché
+        français des télécommunications. Les données suivantes concernent
+        principalement le marché grand public et permettent de comparer Free
+        aux trois autres grands opérateurs français. Le marché des profesionnels sera évoqué plus brièvement dans la suite de la page.
+    </p>
+</section>
     <main>
         <!-- Partie 1 : internet fixe -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>Les parts de marché dans l'internet fixe</h2>
-                <div class="bloc-texte">
-                    <p>Voici les parts de marché des 4 grands opérateurs internet en France sur le marché de l'internet fixe.</p>
-                    <p>On remarque avant tout la domination d'Orange avec près de 42% de la totalité des abonnés fixe de France, cependant Free reste la deuxième force avec plus de 23% des contrats.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/Parts_de_marché_fixe.png" alt="Parts de marché dans le fixe">
-        </section>
-        <p>Comme nous pouvons le voir, Free est le 2e acteur dans le marché des telecoms après Orange, leader incontestable depuis des années. Une telle percée s'explique par leur guerre des prix sur le marché mobile avec leur forfait basique à 2€ et leur offre haut de gamme ne coûtant seulement 19,99€ par mois contre souvent dans les 50 à 60€ pour Orange et SFR. Côté fixe, ils emploient une stratégie de rupture tarifaire. C'est-à-dire qu'ils emploient des prix cassés, des offres sans engagement et souvent avec un niveau de données très élevé.</p>
+       <section class="section">
+    <div class="colonne-texte">
+        <h2>Les parts de marché dans l'internet fixe</h2>
 
+        <div class="bloc-texte">
+            <p>
+                Le marché français de l'internet fixe est actuellement divisé
+                entre quatre grands opérateurs : Orange, Free,
+                SFR et Bouygues Telecom. Notons que SFR va être démantelé après
+                son rachat par les 3 autres opérateurs.
+            </p>
+
+            <p>
+                Orange domine ce marché avec près de 42 % des abonnements,
+                tandis que Free occupe la deuxième position avec plus de
+                23 %. SFR et Bouygues Telecom se contentent du reste du marché.
+            </p>
+
+            <p>
+                Le fait que Free occupe la deuxième place montre à quel point Free
+                a su s'imposer face aux opérateurs historiques. Sa politique tarifaire,
+                ses offres sans engagement et le développement de ses offres
+                fibre ont notamment contribué à renforcer sa présence sur
+                le marché de l'internet fixe.
+            </p>
+        </div>
+    </div>
+
+    <figure class="image-section">
+        <img src="../img/Parts_de_marché_fixe.png"
+         alt="Parts de marché des opérateurs français dans l'internet fixe">
+    <p class="legende-image">
+        Graphique en camenbert présentant les parts de marché des 4 opérateurs sur le marché fixe.
+        <br>Source : <a href="https://www.eco-conscient.com/art-90375-marche-des-telecoms-2026-part-de-marche-abonnes-et-enjeux-de-la-consolidation.html">EcoConscient TMC</a>
+    </p>
+    </figure>
+</section>
         <!-- Partie 2 : mobile -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>L'évolution du nombre d'abonnés sur le marché mobile</h2>
-                <div class="bloc-texte">
-                    <p>Nous retrouvons ensuite les parts de marché des opérateurs sur le marché mobile.</p>
-                    <p>Le résultat est cette fois-ci plus contrasté. Orange n'a plus une domination écrasante comme sur le marché fixe mais conserve la première place devant Free avec 29% du marché. Free possède tout de même 27% des parts de marché et se place donc comme un sérieux concurent à Orange.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/Parts_de_marché_mobile.png" alt="Parts de marché dans le mobile">
-        </section>
+      <section class="section">
+    <figure class="image-section">
+         <img src="../img/Parts_de_marché_mobile.png"
+         alt="Parts de marché des opérateurs français sur le marché mobile">
+    <figcaption class="legende-image">
+        Graphique en camenbert présentant les parts de marché des 4 opérateurs sur le marché mobile.
+        <br>Source : <a href="https://www.eco-conscient.com/art-90375-marche-des-telecoms-2026-part-de-marche-abonnes-et-enjeux-de-la-consolidation.html">EcoConscient TMC</a></figcaption>
+    </figure>
 
-        <!-- Partie 3 : professionnels -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>L'évolution du chiffre d'affaires</h2>
-                <div class="bloc-texte">
-                    <p>Le chiffre d'affaire du groupe Iliad n'a cessé d'augmenter depuis la création de Free en 1999.</p>
-                    <p>Free est d'ailleurs la seule entreprise à faire part d'une croissance de son chiffre d'affaires.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/image-temporaire.png" alt="Image temporaire">
-        </section>
+    <div class="colonne-texte">
+        <h2>Les parts de marché dans le mobile</h2>
 
-        <!-- Partie 4 : le marché -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>L'expansion du groupe Iliad en Europe</h2>
-                <div class="bloc-texte">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
-                    <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/image-temporaire.png" alt="Image temporaire">
-        </section>
-         <!-- Partie 5 : france -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>En France</h2>
-                <div class="bloc-texte">
-                    <p>En France, iliad principalement connu grace a une de leurs société "Free" a connu un succès remarquable grâce à sa stratégie de développement et son approche innovante, mais free n'est pas leur seule entreprise française, </p>
-                    <p>il existe aussi "Stencer" qui est un service de paiement pour de petites entreprises ou des commerçants ou "Scaleway" une plateforme de cloud public.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/image-temporaire.png" alt="Image temporaire">
-        </section>
+        <div class="bloc-texte">
+            <p>
+                Le marché mobile quant à lui est aussi réparti entre les 4 opérateurs
+                et d'ici quelques années SFR disparaîtra. On retrouve donc Free,
+                Orange, SFR et Bouygues Telecom.La répartition est plus équilibrée
+                que sur le marché de l'internet fixe car ici, tout le monde a à peu près
+                la même. 
+            </p>
 
-        <!-- Partie 6 : italie -->
-        <section class="section">
-            <img class="image-section" src="../img/image-temporaire.png" alt="Image temporaire">
-            <div class="colonne-texte">
-                <h2>En Italie</h2>
-                <div class="bloc-texte">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
-                    <p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-                </div>
-            </div>
+            <p>
+                Orange conserve la première place avec environ 29 % des
+                abonnements, mais Free se rapproche fortement avec 27 %.
+                L'écart entre les deux opérateurs est donc relativement
+                faible, tandis que SFR et Bouygues Telecom occupent les
+                positions suivantes.
+            </p>
 
-        </section>
+            <p>
+                Cette position est particulièrement remarquable puisque
+                Free Mobile n'est arrivé sur le marché qu'en 2012. En
+                proposant des forfaits à prix très bas et sans engagement,
+                Free a rapidement gagné des parts de marché et est devenu
+                un concurrent majeur des opérateurs historiques.
+            </p>
+        </div>
+    </div>
+</section>
+        <div class="intro-section">
 
-        <!-- Partie 7 : pologne -->
-        <section class="section">
-            <div class="colonne-texte">
-                <h2>En Pologne</h2>
-                <div class="bloc-texte">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
-                    <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
-                </div>
-            </div>
-            <img class="image-section" src="../img/image-temporaire.png" alt="Image temporaire">
-        </section>
+    <h2>Le marché professionnel</h2>
+
+    <p>
+        En plus de ses offres destinées aux particuliers, Free développe
+        également son activité sur le marché professionnel avec Free Pro.
+        L'entreprise propose aux professionnels et aux entreprises des
+        solutions de télécommunication adaptées à leurs besoins, notamment
+        dans les domaines de l'accès à internet, de la téléphonie et des
+        services associés.
+    </p>
+
+    <p>
+        Le marché professionnel représente ainsi un axe de diversification
+        pour le groupe. Il permet à Free d'élargir sa clientèle au-delà du
+        grand public et de développer de nouvelles sources de revenus.
+    </p>
+
+</div>
+        <!-- Partie 3 : Evolution du chiffre d'affaires -->
+       <section class="section">
+
+    <div class="colonne-texte">
+        <h2>L'évolution du chiffre d'affaires</h2>
+
+        <div class="bloc-texte">
+
+            <p>
+                Le chiffre d'affaires (CA) correspond à l'ensemble des revenus
+                générés par une entreprise grâce à la vente de ses produits et
+                services. Son évolution permet notamment d'observer la croissance
+                de l'activité économique d'un groupe.
+            </p>
+
+            <p>
+                Le graphique montre une progression importante du chiffre
+                d'affaires du groupe Iliad depuis la création de Free en 1999.
+                Cette croissance s'explique notamment par l'augmentation du
+                nombre d'abonnés, le développement des offres mobiles et
+                internet ainsi que l'élargissement des activités du groupe
+                (cf. Expansion en Europe).
+            </p>
+
+            <p>
+                Cette évolution témoigne donc d'une croissance durable de
+                l'activité économique du groupe. Free a progressivement gagné
+                des parts de marché en France tout en développant ses activités
+                à l'étranger, ce qui contribue à augmenter les revenus du groupe.
+            </p>
+
+            <p>
+                Il est cependant important de distinguer le chiffre d'affaires
+                de la rentabilité. Une hausse du CA signifie que l'entreprise
+                réalise davantage de revenus, mais elle ne permet pas à elle
+                seule de déterminer si l'entreprise réalise davantage de
+                bénéfices. D'autres indicateurs économiques doivent être
+                étudiés pour mesurer sa performance financière.
+            </p>
+
+        </div>
+    </div>
+
+   <figure class="image-section">
+         <img src="../img/Evolution__du_chiffre_d'affaires.png"
+         alt="Évolution du chiffre d'affaires du groupe iliad">
+    <figcaption class="legende-image">
+        Graphique en camenbert présentant les parts de marché des 4 opérateurs sur le marché mobile.
+        <br>Source : <a href="https://www.iliad.fr/media/Rapport_Financier_Annuel_Groupe_iliad_2025_c83e35e26c.pdf">Groupe Iliad</a></figcaption>
+       </figure>
+</section>
+
+        <!-- Partie 4 : implémentation du groupe en Europe -->
+      <section class="section">
+           <figure class="image-section">
+
+        <img src="../img/Iliad_Europe.png"
+             alt="Implantation du groupe iliad en Europe">
+
+        <figcaption class="legende-image">
+            Implantation du groupe iliad en Europe : France, Italie et Pologne.
+        </figcaption>
+        </figure>
+
+    <div class="colonne-texte">
+
+        <h2>L'expansion de Free en Europe</h2>
+
+        <div class="bloc-texte">
+
+            <p>
+                Le groupe iliad, maison mère de Free, a progressivement
+                développé ses activités en dehors de la France afin de
+                conquérir de nouveaux marchés européens.
+            </p>
+
+            <p>
+                Aujourd'hui, le groupe est principalement implanté en
+                <strong>France, en Italie et en Pologne</strong>. La carte
+                ci-contre permet de visualiser cette implantation européenne.
+            </p>
+
+            <p>
+                Cette expansion permet à iliad de diversifier ses activités,
+                d'augmenter son nombre d'abonnés et de développer son chiffre
+                d'affaires à l'échelle européenne.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+         <!-- Partie 5 : France -->
+      <section class="section">
+
+    <div class="colonne-texte">
+
+        <h2>La France : le marché historique</h2>
+
+        <div class="bloc-texte">
+
+            <p>
+                La France constitue le marché historique de Free. C'est
+                dans ce pays que l'entreprise a été créée en 1999 et qu'elle
+                a commencé à développer son modèle fondé sur des offres
+                accessibles et sans engagement.
+            </p>
+
+            <p>
+                Avec ses activités dans l'internet fixe et le mobile, Free
+                occupe aujourd'hui une place importante sur le marché français
+                des télécommunications (étant 2e opérateur après Orange).
+                Le développement rapide de la fibre et de ses
+                forfaits mobiles lui permet de continuer à augmenter son
+                nombre d'abonnés.
+            </p>
+
+            <p>
+                Le marché français reste donc essentiel pour le groupe et
+                constitue la base de son développement international.
+            </p>
+
+        </div>
+
+    </div>
+
+    <img class="image-section"
+         src="../img/Free_France.png"
+         alt="Activités de Free en France">
+
+</section>
+
+        <!-- Partie 6 : Italie -->
+      <section class="section">
+
+    <img class="image-section"
+         src="../img/Free_Italie.png"
+         alt="Activités de iliad en Italie">
+
+    <div class="colonne-texte">
+
+        <h2>L'Italie : un développement rapide</h2>
+
+        <div class="bloc-texte">
+
+            <p>
+                Le groupe iliad s'est implanté en Italie en 2018 avec le
+                lancement de ses offres mobiles. L'objectif était de
+                reproduire une partie de la stratégie développée en France
+                en proposant des offres simples, compétitives et sans
+                engagement.
+            </p>
+
+            <p>
+                Cette arrivée a permis à iliad de gagner rapidement des
+                abonnés sur le marché italien et de devenir un nouvel acteur
+                important du secteur des télécommunications.
+            </p>
+
+            <p>
+                L'Italie représente ainsi un marché important dans la
+                stratégie d'internationalisation du groupe.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- Partie 7 : Pologne -->
+      <section class="section">
+
+    <div class="colonne-texte">
+
+        <h2>La Pologne : une croissance externe</h2>
+
+        <div class="bloc-texte">
+
+            <p>
+                La présence du groupe iliad en Pologne repose notamment sur
+                l'acquisition de Play, l'un des principaux opérateurs
+                télécoms du pays. Cette opération a permis au groupe de
+                s'implanter rapidement sur un nouveau marché européen.
+            </p>
+
+            <p>
+                Contrairement à l'arrivée de Free en Italie, le développement
+                en Pologne s'appuie donc principalement sur une stratégie de
+                <strong>croissance externe</strong>, c'est-à-dire le
+                développement d'une entreprise par l'acquisition d'autres
+                sociétés.
+            </p>
+
+            <p>
+                Cette implantation renforce la présence européenne du groupe
+                et contribue à la diversification de ses activités.
+            </p>
+
+        </div>
+
+    </div>
+
+    <img class="image-section"
+         src="../img/Free_Pologne.png"
+         alt="Activités du groupe iliad en Pologne">
+
+</section>
+        <section class="conclusion-page">
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Free s'est progressivement imposé comme un acteur majeur des
+        télécommunications en France grâce à une stratégie fondée sur des
+        offres compétitives, le développement de ses réseaux et une forte
+        présence sur les marchés fixe et mobile.
+    </p>
+
+    <p>
+        Cette stratégie a permis au groupe iliad de développer son activité
+        et d'augmenter son chiffre d'affaires tout en gagnant des parts de
+        marché. Le groupe a également poursuivi sa croissance en dehors de
+        la France grâce à son implantation en Italie et en Pologne.
+    </p>
+
+    <p>
+        L'entreprise cherche ainsi à poursuivre sa croissance en combinant
+        développement sur ses marchés historiques et expansion européenne.
+        Free est donc passé d'un nouvel opérateur français à un groupe
+        présent sur plusieurs marchés européens.
+    </p>
+
+</section>
     </main>
-    <p>Pas besoin de parler des pros en détail avec des graphs, juste détailler ce qu'il y a déjà et éventuellement rajouter des petites données comme les salariés et des bricoles et bien-sûr compléter les données.</p>
     <footer>
-        <img src="../Logo_équipe2.png" alt="Logo de notre équipe">
+        <img src="../img/Logo_équipe2.png" alt="Logo de notre équipe">
         <br>
         <br>Mail : <a href="mailto:nolan.fischer@edu.univ-fcomte.fr?subject=SAE_1_05_06">nolan.fischer@edu.univ-fcomte.fr</a>
         <br>Créé par : Nolan Fischer, membre des 5 Webmasters
     </footer>
 
 </body>
-</html>s 
+</html>

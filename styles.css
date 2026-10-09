@@ -1,11 +1,15 @@
+/* Police Manrope | L'import doit rester tout en haut du fichier, sinon le navigateur l'ignore. */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
 /* css pour index.html */
 ul.jester {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 380px;
   padding: 20px;
   display: flex;
   gap: 4vw;
     overflow-x: auto;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
 
 }
@@ -21,9 +25,69 @@ li.jester-item {
 }
 
 li.jester-item {
-    background-image: url('../Free-main/img/image-temporaire.png');
     background-size: length;
     background-position: center;
+}
+li.jester-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+#jes1 {
+  background-image: url('../Free-main/img/img_jes-1.png');
+  background-size: cover;
+}
+
+#jes2 {
+  background-image: url('../Free-main/img/img_jes-2.png');
+  background-size: auto;
+}
+
+#jes3 {
+  background-image: url('../Free-main/img/img_jes-3.jpg');
+  background-size: cover;
+  background-position: left ;
+}
+
+#jes4 {
+
+  background-image: url('../Free-main/img/img_jes-4.jpg');
+  background-size: cover;
+  background-position: left bottom ;
+}
+
+#jes5 {
+  background-image: url('../Free-main/img/img_jes-5.jpg');
+  background-size: cover;
+}
+
+ul {
+  scroll-marker-group: after;
+}
+
+ul::scroll-marker-group {
+  position-anchor: jester-item bottom;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+li::scroll-marker {
+  content: attr(data-accName);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+
+li::scroll-marker:target-current {
+  background-color: black;
 }
 
 .titre {
@@ -46,10 +110,6 @@ h1.title {
   background-color: #95A09F;
   border-radius: 5px;
 }
-
-
-/* Police Manrope (choisie par le client dans le questionnaire) */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
 
 /*
   Couleurs utilisées (palette n°1 du client, sans CE2020) :
@@ -165,27 +225,47 @@ img {
 }
 
 /* logo dans l'en-tête */
-.content img {
-  float: left;
-  margin: 20px;
+.header .content {
+  order: 1;
+}
+
+.header .content img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0;
 }
 
 /* bouton du menu */
 #btnMenu {
-  background: #FFFFFF;
-  border: 1px solid #95A09F;
-  border-radius: 4px;
-  padding: 4px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #3A4B49;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #B80000;
   cursor: pointer;
-  color: #3A4B49;
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 #btnMenu:hover {
-  background: #B8DFE0;
+  background-color: #B80000;
+  color: #FFFFFF;
+  transform: scale(1.05);
 }
-#btnMenu svg {
-  display: block; /* enlève l'espace sous l'icône */
-}
-
 /* menu latéral */
 #menu {
   position: fixed;
@@ -251,9 +331,7 @@ img {
 }
 
 .header-accueil .content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
 }
 
 .header-accueil #btnMenu {
@@ -332,12 +410,12 @@ img {
 /* Une partie : le texte à gauche, l'image à droite */
 .section {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .colonne-texte {
@@ -359,6 +437,23 @@ img {
 .image-section {
   flex: 1;
   min-width: 0;
+  margin: auto;
+}
+
+.image-section img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin: auto;
+}
+
+.legende-image {
+  max-width: 550px;
+  margin: 0.75rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #3A4B49;
 }
 
 /* ===== pied de page ===== */
@@ -486,3 +581,78 @@ footer a:focus-visible {
 .event:nth-child(even) .event-figure { grid-column: 1; }
 
 
+.intro-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #B8DFE0;
+  border-left: 5px solid #B80000;
+  border-radius: 5px;
+}
+
+.intro-page p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.intro-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.intro-section h2 {
+  margin-bottom: 0.5rem;
+  color: #B80000;
+}
+
+.intro-section p {
+  margin-top: 0;
+}
+.conclusion-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #B8DFE0;
+  border-top: 4px solid #B80000;
+  border-radius: 5px;
+}
+
+.conclusion-page h2 {
+  margin-top: 0;
+  color: #B80000;
+  text-align: center;
+}
+
+.conclusion-page p {
+  line-height: 1.7;
+}
+
+/* Une section sur deux a son image à gauche (disposition « tondeuse à gazon »).
+   Dans le HTML le texte reste avant l'image : sur téléphone, on lit donc toujours
+   le titre, puis le texte, puis l'image. */
+@media (min-width: 769px) {
+  .section-inversee {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Sources en bas de page */
+.sources {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  font-size: 0.833rem;
+}
+
+.sources h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.44rem;
+}
+
+.sources ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
