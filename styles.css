@@ -643,6 +643,9 @@ footer a:focus-visible {
 
 .event:nth-child(even) .event-text { grid-column: 3; }
 .event:nth-child(even) .event-figure { grid-column: 1; }
+
+/* ===== INTRODUCTION PRINCIPALE ===== */
+
 .intro-page {
   width: 90%;
   max-width: 1200px;
@@ -660,6 +663,33 @@ footer a:focus-visible {
 }
 
 
+/* ===== INTRODUCTIONS DES PARTIES ===== */
+
+.intro-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.intro-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #B80000;
+}
+
+.intro-section p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.intro-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===== CONCLUSION ===== */
+
 .conclusion-page {
   width: 90%;
   max-width: 1200px;
@@ -672,25 +702,28 @@ footer a:focus-visible {
 
 .conclusion-page h2 {
   margin-top: 0;
+  margin-bottom: 1rem;
   color: #B80000;
   text-align: center;
 }
 
 .conclusion-page p {
+  margin-top: 0;
+  margin-bottom: 1rem;
   line-height: 1.7;
 }
 
-.intro-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 2rem auto 0;
+.conclusion-page p:last-child {
+  margin-bottom: 0;
 }
 
-.intro-section h2 {
-  margin-bottom: 0.5rem;
-  color: #B80000;
+
+/* ===== ADAPTATION AUX PETITS ECRANS ===== */
+
+@media (max-width: 768px) {
+  .intro-page,
+  .conclusion-page {
+    padding: 1.25rem;
+  }
 }
 
-.intro-section p {
-  margin-top: 0;
-}
