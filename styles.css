@@ -605,8 +605,8 @@ footer a:focus-visible {
     content: '';
     position: absolute;
     left: 50%;
-    top: 0;
-    bottom: 0;
+    top: 30px;
+    bottom: 30px;
     width: 3px;
     background-color: #B80000;
     transform: translateX(-50%);
@@ -645,6 +645,78 @@ footer a:focus-visible {
 .event:nth-child(even) .event-figure { grid-column: 1; }
 
 
+.event {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    position: relative; /* AJOUTE CETTE LIGNE */
+}
 
+.event-text, 
+.event-figure {
+    flex: 1; 
+}
 
+.event-dot {
+    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
+    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
+    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    
+    width: 16px;
+    height: 16px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+    margin-top: 25px; /* Optionnel : pour l'aligner avec le titre */
+}.event {
+    display: flex;
+    align-items: flex-start; 
+    gap: 200px; 
+    position: relative; /* AJOUTE CETTE LIGNE */
+}
 
+.event-text, 
+.event-figure {
+    flex: 1; 
+}
+
+.event-dot {
+    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
+    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
+    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    
+    width: 16px;
+    height: 16px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+    margin-top: 170px; /* Optionnel : pour l'aligner avec le titre */
+}
+
+/* Alternance "Tondeuse à gazon" pour les événements pairs */
+.event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Cadre autour du texte */
+.event-text {
+    padding: 20px;
+    border: 1px solid #95A09F;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+/* Date en rouge et soulignée */
+.event-text .year {
+    display: inline-block;
+    font-weight: 700;
+    color: #B80000;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #E34040;
+    padding-bottom: 2px;
+}
