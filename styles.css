@@ -644,6 +644,23 @@ footer a:focus-visible {
 .event:nth-child(even) .event-text { grid-column: 3; }
 .event:nth-child(even) .event-figure { grid-column: 1; }
 
+/* ===== INTRODUCTION PRINCIPALE ===== */
+
+.intro-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #B8DFE0;
+  border-left: 5px solid #B80000;
+  border-radius: 5px;
+}
+
+.intro-page p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
 
 .event {
     display: flex;
@@ -720,3 +737,42 @@ footer a:focus-visible {
     border-bottom: 2px solid #E34040;
     padding-bottom: 2px;
 }
+/* ===== CONCLUSION ===== */
+
+.conclusion-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #B8DFE0;
+  border-top: 4px solid #B80000;
+  border-radius: 5px;
+}
+
+.conclusion-page h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #B80000;
+  text-align: center;
+}
+
+.conclusion-page p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.conclusion-page p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===== ADAPTATION AUX PETITS ECRANS ===== */
+
+@media (max-width: 768px) {
+  .intro-page,
+  .conclusion-page {
+    padding: 1.25rem;
+  }
+}
+
