@@ -28,6 +28,13 @@ sous un angle économique (chiffre d'affaires, effectifs), ainsi que sous d'autr
 ### page3.html :  
 **Auteur :** Mohamed Hedi Hamza  
 **Utilité :** Présentation des produits et services  
+
+**Lien vers le résultat de conformité de la page 3 :** [https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage3%2Fpage3.html](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage3%2Fpage3.html)
+
+**Lien vers la validation d'éco-conception :** [https://www.ecoindex.fr/resultat/?id=a5044207-f727-46d4-b867-62f79509c2e9](https://www.ecoindex.fr/resultat/?id=a5044207-f727-46d4-b867-62f79509c2e9)
+
+**La page et les vérifications ont été faites par Mohamed Hedi HAMZA.**
+
 ### page4.html :  
 **Auteur :** Yanis Iklef  
 **Utilité :** Histoire de l'entreprise  
