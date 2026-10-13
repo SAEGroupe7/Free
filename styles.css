@@ -666,7 +666,7 @@ footer a:focus-visible {
     display: flex;
     align-items: flex-start; 
     gap: 20px; 
-    position: relative; /* AJOUTE CETTE LIGNE */
+    position: relative; 
 }
 
 .event-text, 
@@ -675,9 +675,9 @@ footer a:focus-visible {
 }
 
 .event-dot {
-    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
-    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
-    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    position: absolute; 
+    left: 50%;          /* le point va au milieu de la page */
+    transform: translateX(-50%); /*le point est centré sur la ligne */
     
     width: 16px;
     height: 16px;
@@ -686,12 +686,12 @@ footer a:focus-visible {
     border-radius: 50%;
     flex-shrink: 0;
     z-index: 2;
-    margin-top: 25px; /* Optionnel : pour l'aligner avec le titre */
+    margin-top: 25px; /*  pour l'aligner avec le titre */
 }.event {
     display: flex;
     align-items: flex-start; 
     gap: 200px; 
-    position: relative; /* AJOUTE CETTE LIGNE */
+    position: relative; 
 }
 
 .event-text, 
@@ -700,9 +700,9 @@ footer a:focus-visible {
 }
 
 .event-dot {
-    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
-    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
-    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    position: absolute; 
+    left: 50%;         
+    transform: translateX(-50%); 
     
     width: 16px;
     height: 16px;
@@ -711,7 +711,7 @@ footer a:focus-visible {
     border-radius: 50%;
     flex-shrink: 0;
     z-index: 2;
-    margin-top: 170px; /* Optionnel : pour l'aligner avec le titre */
+    margin-top: 170px; 
 }
 
 /* Alternance "Tondeuse à gazon" pour les événements pairs */
