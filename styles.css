@@ -851,3 +851,65 @@ footer a:focus-visible {
 .conclusion-page p {
   line-height: 1.7;
 }
+
+/* Une section sur deux a son image à gauche (disposition « tondeuse à gazon »).
+   Dans le HTML le texte reste avant l'image : sur téléphone, on lit donc toujours
+   le titre, puis le texte, puis l'image. */
+@media (min-width: 769px) {
+  .section-inversee {
+    flex-direction: row-reverse;
+  }
+}
+
+/* ===== page2 : marques de téléphones ===== */
+
+/* Les téléphones côte à côte, le nom de la marque sous chaque photo */
+.marques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 3rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+
+.marques img {
+  display: block;
+  width: 160px;
+  margin: 0 auto 0.5rem;
+}
+
+/* Un titre de partie reste près du premier bloc qui le suit
+   (sans ça, les 3rem de marge intérieure de .section l'en éloignent) */
+.titre-partie + .section {
+  padding-top: 1rem;
+}
+
+/* Box internet : le cadre de texte prend toute la hauteur de la partie.
+   Sinon une photo plus haute que son texte agrandit la partie
+   et l'écart entre deux cadres change d'une box à l'autre. */
+.box {
+  align-items: stretch;
+}
+
+.box .colonne-texte {
+  display: flex;
+}
+
+.box .bloc-texte {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* le texte reste au milieu du cadre */
+}
+
+.box .bloc-texte p {
+  margin-top: 0; /* en flex, cette marge s'ajouterait à celle du titre */
+}
+
+.box .image-section img {
+  max-height: 320px;
+  object-fit: contain;
+}
