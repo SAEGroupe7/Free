@@ -2,65 +2,105 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <script src="menu.js" defer></script>
-  <script src="carrousel.js" defer></script>
-  <title>Accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="menu.js" defer></script>
+    <script src="carrousel.js" defer></script>
+
+    <title>Accueil</title>
 </head>
 
 <body>
-  <!--entête-->
-  <header class="header">
-      <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
-          <span>MENU</span>
-      </button>
-      <nav id="menu"></nav>
-      <h1>Accueil</h1>
-      <div class="content">
-          <a href="index.html"><img src="img/Logo-de-Free-500x281.png" alt="Logo de Free"></a>
-      </div>
-  </header>
-  <!--caroussel-->
-  <ul class="jester dragscroll">
-    <li class="jester-item" id="jes1" name="page1">
-      <h1> <a href="page1/page1.html" style="text-decoration:none">Économie</a> </h1>
-    </li>
-    <li class="jester-item" id="jes2" name="page2">
-      <h1> <a href="page2/page2.html" style="text-decoration:none">Services et produits</a> </h1>
-    </li>
-    <li class="jester-item" id="jes3" name="page3">
-      <h1> <a href="page3/page3.html" style="text-decoration:none">Présentation des produits et services</a> </h1>
-    </li>
-    <li class="jester-item" id="jes4" name="page4">
-      <h1> <a href="page4/page4.html" style="text-decoration:none">Histoire de l'entreprise</a> </h1>
-    </li>
-    <li class="jester-item" id="jes5" name="page5">
-      <h1> <a href="page5/page5.html" style="text-decoration:none">Initiative pour l'environnement</a> </h1>
-    </li>
-  </ul>
+    <!-- En-tête -->
+    <header class="header">
+        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+            <span>MENU</span>
+        </button>
 
-  
-  <main>
-    <!-- Texte de présentation sous le carrousel (zoning 3) -->
-    <section class="intro">
-      <h1>Bienvenue sur le site web qui présente Free</h1>
-      <p>Le projet s'articule autour de l'entreprise Free, entreprise qui sera décrite avec son histoire,
-        ses différents produits, les services qu'elle propose, ses différents revenus (économie) et enfin son expansion en
-        Europe.</p>
-    </section>
-  </main>
-  <!--pied de page-->
-  <footer> <img src="img/Logo_équipe2.png" alt="Notre Logo" />
-    <br>
-    <br> Mail : <a href="mailto:doryann.gras@edu.univ-fcomte.fr?subject=SAE_1_05_06"> doryann.gras@edu.univ-fcomte.fr
-    </a>
+        <nav id="menu" aria-label="Menu principal"></nav>
 
-    <br> Créé par : Doryann Gras, membre des 5 Webmasters
-  </footer>
-  </body>
-  
-  </html>
+        <h1>Accueil</h1>
+
+        <div class="content">
+            <a href="index.html">
+                <img src="img/Logo-de-Free-500x281.png"
+                     alt="Logo de Free">
+            </a>
+        </div>
+    </header>
+
+    <!-- Carrousel de navigation -->
+    <nav aria-label="Rubriques du site">
+        <ul class="jester dragscroll">
+            <li class="jester-item" id="jes1">
+                <h2>
+                    <a href="page1/page1.html">Économie</a>
+                </h2>
+            </li>
+
+            <li class="jester-item" id="jes2">
+                <h2>
+                    <a href="page2/page2.html">Services et produits</a>
+                </h2>
+            </li>
+
+            <li class="jester-item" id="jes3">
+                <h2>
+                    <a href="page3/page3.html">
+                        Présentation des produits et services
+                    </a>
+                </h2>
+            </li>
+
+            <li class="jester-item" id="jes4">
+                <h2>
+                    <a href="page4/page4.html">Histoire de l'entreprise</a>
+                </h2>
+            </li>
+
+            <li class="jester-item" id="jes5">
+                <h2>
+                    <a href="page5/page5.html">
+                        Initiative pour l'environnement
+                    </a>
+                </h2>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="intro">
+            <h2>Bienvenue sur le site web qui présente Free</h2>
+
+            <p>
+                Le projet s'articule autour de l'entreprise Free, qui sera
+                présentée à travers son histoire, ses différents produits,
+                les services qu'elle propose, ses revenus (économie) et enfin
+                son expansion en Europe.
+            </p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <img src="img/Logo_équipe2.png" alt="Notre logo">
+
+        <p>
+            Mail :
+            <a href="mailto:doryann.gras@edu.univ-fcomte.fr?subject=SAE_1_05_06">
+                doryann.gras@edu.univ-fcomte.fr
+            </a>
+        </p>
+
+        <p>
+            Créé par : Doryann Gras, membre des 5 Webmasters
+        </p>
+    </footer>
+</body>
+
+</html>
