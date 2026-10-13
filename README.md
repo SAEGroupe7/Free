@@ -34,9 +34,15 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 **Auteur :** Ilyana Gueraouni  
 **Utilité :** Service et produit  
 
+**Lien vers le résultat de conformité de la page 2 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage2%2Fpage2.html)
+
 <img src="page2/capture_2_W3C.png" style="width=400px" alt="capture ecran sur w3c">
 
+**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a2391d94-6bff-4868-b315-c8be70a24c09)
+
 <img src="page2/capture_2_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+
+**La page a été faite par Ilyana GUERAOUNI et les vérifications par Nolan FISCHER.**
 
 
 ### page3.html :  
@@ -70,11 +76,17 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 ### page5.html :  
 **Auteur :** Doryann Gras  
-**Utilité :** Expansion du groupe Iliad en Europe
+**Utilité :** Initiatives pour l'environnement
+
+**Lien vers le résultat de conformité de la page 5 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage2%2Fpage2.html)
 
 <img src="page5/capture_5_W3C.png" style="width=400px" alt="capture ecran sur w3c">
 
+**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a2391d94-6bff-4868-b315-c8be70a24c09)
+
 <img src="page5/capture_5_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+
+**La page a été faite par Doryann GRAS et les vérifications par Nolan FISCHER.**
 
 ## Répartition du travail
 
