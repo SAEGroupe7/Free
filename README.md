@@ -78,11 +78,11 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 **Auteur :** Doryann Gras  
 **Utilité :** Initiatives pour l'environnement
 
-**Lien vers le résultat de conformité de la page 5 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage2%2Fpage2.html)
+**Lien vers le résultat de conformité de la page 5 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage5%2Fpage5.html)
 
 <img src="page5/capture_5_W3C.png" style="width=400px" alt="capture ecran sur w3c">
 
-**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a2391d94-6bff-4868-b315-c8be70a24c09)
+**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=102c070f-6d42-4613-b3d8-142808574f2d)
 
 <img src="page5/capture_5_ecoconception.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
