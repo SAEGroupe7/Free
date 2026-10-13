@@ -20,7 +20,13 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Lien vers le résultat de conformité de la page 1 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage1%2Fpage1.html)
 
+<img src="page1/capture_1_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
+
+
 **Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=ddd5f841-d90f-487a-a786-44065bb39764)
+
+<img src="page1/capture_1_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
 **La page et les vérifications ont été faites par Nolan FISCHER.**
 
