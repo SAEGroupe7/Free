@@ -43,7 +43,7 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Lien vers le résultat de conformité de la page 4 :** [https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage4%2Fpage4.html](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage4%2Fpage4.html)
 
-**Lien vers la validation d'éco-conception :** [https://www.ecoindex.fr/resultat/?id=a700e5f1-41ad-45d8-9364-32cda1d0907b]
+**Lien vers la validation d'éco-conception :** [https://www.ecoindex.fr/resultat/?id=a700e5f1-41ad-45d8-9364-32cda1d0907b](https://www.ecoindex.fr/resultat/?id=a700e5f1-41ad-45d8-9364-32cda1d0907b)
 
 
 **La page et les vérifications ont été faites par Yanis Iklef.**
