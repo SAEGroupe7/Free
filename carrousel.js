@@ -32,7 +32,14 @@ carrousel.after(points);
 
 const majPoints = () => {
   const i = courante();
-  [...points.children].forEach((point, j) => point.setAttribute('aria-current', j === i));
+
+  [...points.children].forEach((point, j) => {
+    if (j === i) {
+      point.setAttribute('aria-current', 'true');
+    } else {
+      point.removeAttribute('aria-current');
+    }
+  });
 };
 carrousel.addEventListener('scroll', majPoints, { passive: true });
 majPoints();
