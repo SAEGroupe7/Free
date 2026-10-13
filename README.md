@@ -25,7 +25,7 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 <img src="img/capture_index_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
-**La page et les vérifications ont été faites par Nolan FISCHER.**
+**La page a été faite par Doryann GRAS et les vérifications par Nolan FISCHER.**
 ### page1.html :  
 **Auteur :** Nolan Fischer  
 **Utilité :** Économie 
@@ -104,24 +104,30 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 ### Planification - Diagramme de GANTT
 
-- Nom Prénom
+- Hamza Mohamed Hedi
+- Iklef Yanis
+- Fischer Nolan
 
 ### Recherches d'informations
 
-- Nom Prénom
-- Nom Prénom
-
+- Hamza Mohamed Hedi
+- Iklef Yanis
+- Fischer Nolan
+- Gras Doryann
+- Guearouni Ilyana 
 
 ### Développement site
 
-- Nom Prénom
+- Gras Doryann
   - Page d’accueil
-  - "Template" de page (Navbar/Footer)
-  - Page présentation
-- Nom Prénom
+- Iklef Yanis
   - Page histoire
-- Nom Prénom
+- Hamza Mohamed Hedi
   - Page organisation
+- Fischer Nolan
+  - Page eco
+- Gueraouni Ilyana
+  - Page produits
 
 
 ## Contributeurs
