@@ -39,7 +39,11 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Lien vers le résultat de conformité de la page 3 :** [CLiquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage3%2Fpage3.html)
 
+<img src="page3/capture_3_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
 **Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a5044207-f727-46d4-b867-62f79509c2e9)
+
+<img src="page3/capture_3_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
 **La page et les vérifications ont été faites par Mohamed Hedi HAMZA.**
 
