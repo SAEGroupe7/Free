@@ -3,14 +3,35 @@
 
 /* css pour index.html */
 ul.jester {
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 380px;
   padding: 20px;
   display: flex;
   gap: 4vw;
     overflow-x: auto;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
+  position: relative; /* repère pour le calcul des positions dans carrousel.js */
+  margin-bottom: 0;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth; /* la slide se remet en place en douceur quand on la lâche */
+}
 
+/* Pendant un cliquer-glisser à la souris (classe ajoutée par carrousel.js) */
+ul.jester.glisse {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+ul.jester.glisse, ul.jester.glisse a {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ul.jester {
+    scroll-behavior: auto;
+  }
 }
 
 li.jester-item {
@@ -21,12 +42,109 @@ li.jester-item {
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
+  position: relative;
+  overflow: hidden; /* coupe l'image agrandie au survol */
+  isolation: isolate; /* garde l'image (z-index: -1) derrière le texte mais devant le fond de la slide */
+}
+
+/* Copie de l'image de fond de la slide, agrandie au survol.
+   On agrandit l'image et pas la slide : une slide plus large que le carrousel
+   empêcherait l'aimantation et le défilement aux flèches du clavier. */
+li.jester-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  transition: transform 0.3s ease;
+}
+
+/* Toute la slide est cliquable, pas seulement le titre : le lien recouvre la slide */
+li.jester-item a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Fond blanc translucide derrière le titre : le rouge reste lisible sur les photos sombres */
+li.jester-item h1 > a {
+  display: inline-block;
+  padding: 0.1em 0.45em 0.15em;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 li.jester-item {
-    background-image: url('../Free-main/img/image-temporaire.png');
     background-size: length;
     background-position: center;
+}
+/* Pas d'effet de survol sur les écrans tactiles : il resterait bloqué après un appui */
+@media (hover: hover) {
+  li.jester-item:hover::before {
+    transform: scale(1.05);
+  }
+}
+
+/* Images du carrousel : photos de Wikimedia Commons, crédits en bas de index.html.
+   background-position règle la partie de la photo visible dans le bandeau. */
+#jes1, #jes2, #jes3, #jes4, #jes5 {
+  background-size: cover;
+}
+
+#jes1 {
+  background-image: url('img/img_jes-1.jpg');
+  background-position: center 35%;
+}
+
+#jes2 {
+  background-image: url('img/img_jes-2.jpg');
+  background-position: center 70%;
+}
+
+#jes3 {
+  background-image: url('img/img_jes-3.jpg');
+  background-position: center;
+}
+
+#jes4 {
+  background-image: url('img/img_jes-4.jpg');
+  background-position: center;
+}
+
+#jes5 {
+  background-image: url('img/img_jes-5.jpg');
+  background-position: center 45%;
+}
+
+/* Ronds de navigation du carrousel (créés par carrousel.js) */
+.jester-points {
+  display: flex;
+  justify-content: center;
+}
+
+.jester-points button {
+  /* zone cliquable plus grande que le rond, pour le tactile */
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.jester-points button::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.jester-points button[aria-current="true"]::before {
+  background-color: black;
 }
 
 .titre {
@@ -92,6 +210,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.986rem;
   color: #B80000;
+}
+h1 > a {
+  color: inherit;
 }
 
 h2 {
@@ -463,6 +584,68 @@ footer a:focus-visible {
     width: 100%;
   }
 }
+.ariane { padding: 10px 20px 0; font-size: 0.9rem; }
+.ariane ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+.ariane li + li::before { content: ">"; margin-right: 8px; color: #95A09F; }
+.ariane li[aria-current="page"] { color: #B80000; font-weight: 500; }
+
+
+/* ===== FRISE CHRONOLOGIQUE ===== */
+
+/* Conteneur principal */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ligne verticale centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    bottom: 30px;
+    width: 3px;
+    background-color: #B80000;
+    transform: translateX(-50%);
+}
+
+/* Chaque événement */
+.event {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+/* Point sur la ligne */
+.event-dot {
+    grid-column: 2;
+    width: 18px;
+    height: 18px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    justify-self: center;
+    z-index: 2;
+}
+
+/* Alternance gauche/droite */
+.event:nth-child(odd) .event-text { grid-column: 1; }
+.event:nth-child(odd) .event-figure { grid-column: 3; }
+
+.event:nth-child(even) .event-text { grid-column: 3; }
+.event:nth-child(even) .event-figure { grid-column: 1; }
+
+/* ===== INTRODUCTION PRINCIPALE ===== */
+
 .intro-page {
   width: 90%;
   max-width: 1200px;
@@ -478,6 +661,178 @@ footer a:focus-visible {
   font-size: 1.05rem;
   line-height: 1.7;
 }
+
+.event {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    position: relative; /* AJOUTE CETTE LIGNE */
+}
+
+.event-text, 
+.event-figure {
+    flex: 1; 
+}
+
+.event-dot {
+    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
+    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
+    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    
+    width: 16px;
+    height: 16px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+    margin-top: 25px; /* Optionnel : pour l'aligner avec le titre */
+}.event {
+    display: flex;
+    align-items: flex-start; 
+    gap: 200px; 
+    position: relative; /* AJOUTE CETTE LIGNE */
+}
+
+.event-text, 
+.event-figure {
+    flex: 1; 
+}
+
+.event-dot {
+    position: absolute; /* AJOUTE CETTE LIGNE (le point sort du flexbox) */
+    left: 50%;          /* AJOUTE CETTE LIGNE (le point va au milieu de la page) */
+    transform: translateX(-50%); /* AJOUTE CETTE LIGNE (le point est centré sur la ligne) */
+    
+    width: 16px;
+    height: 16px;
+    background-color: #E34040;
+    border: 3px solid #B80000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+    margin-top: 170px; /* Optionnel : pour l'aligner avec le titre */
+}
+
+/* Alternance "Tondeuse à gazon" pour les événements pairs */
+.event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Cadre autour du texte */
+.event-text {
+    padding: 20px;
+    border: 1px solid #95A09F;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+/* Date en rouge et soulignée */
+.event-text .year {
+    display: inline-block;
+    font-weight: 700;
+    color: #B80000;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #E34040;
+    padding-bottom: 2px;
+}
+/* ===== CONCLUSION ===== */
+
+.conclusion-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #B8DFE0;
+  border-top: 4px solid #B80000;
+  border-radius: 5px;
+}
+
+.conclusion-page h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #B80000;
+  text-align: center;
+}
+
+.conclusion-page p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.conclusion-page p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===== ADAPTATION AUX PETITS ECRANS ===== */
+
+@media (max-width: 768px) {
+  .intro-page,
+  .conclusion-page {
+    padding: 1.25rem;
+  }
+}
+
+
+
+/* ===== SECTION XAVIER NIEL ===== */
+
+.focus-xavier {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.focus-texte {
+    flex: 1;
+}
+
+.focus-texte h2 {
+    color: #3a4b49;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #E34040;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.focus-texte p {
+    color: #3A4B49;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+.focus-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.focus-image figcaption {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #3A4B49;
+    font-style: italic;
+    text-align: center;
+}
+
+ 
+.focus-image img {
+    border-radius: 10px; 
+}
+
+
 .intro-section {
   width: 90%;
   max-width: 1200px;
@@ -492,49 +847,7 @@ footer a:focus-visible {
 .intro-section p {
   margin-top: 0;
 }
-.conclusion-page {
-  width: 90%;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #B8DFE0;
-  border-top: 4px solid #B80000;
-  border-radius: 5px;
-}
-
-.conclusion-page h2 {
-  margin-top: 0;
-  color: #B80000;
-  text-align: center;
-}
 
 .conclusion-page p {
   line-height: 1.7;
-}
-
-/* Une section sur deux a son image à gauche (disposition « tondeuse à gazon »).
-   Dans le HTML le texte reste avant l'image : sur téléphone, on lit donc toujours
-   le titre, puis le texte, puis l'image. */
-@media (min-width: 769px) {
-  .section-inversee {
-    flex-direction: row-reverse;
-  }
-}
-
-/* Sources en bas de page */
-.sources {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto 2rem auto;
-  font-size: 0.833rem;
-}
-
-.sources h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.44rem;
-}
-
-.sources ul {
-  margin: 0;
-  padding-left: 1.2rem;
 }

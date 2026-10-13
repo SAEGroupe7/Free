@@ -1,146 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../styles.css">
-    <script src="../menu.js" defer></script>
-    <title>Histoire de l'entreprise</title>
-</head> 
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+ <link rel="icon" href="../favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="../styles.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@4.5.0/index.css">
+ <script src="../menu.js" defer></script>
+ <title>Histoire de l'entreprise</title>
+
+</head>
 <body>
-    <header class="header">
-        
-        <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-        </button>
-        <h1>Histoire de l'entreprise</h1>
-        <nav id="menu"></nav>
-        
-        <div class="content">
-            <a href="../index.html"><img src="../img/Logo-de-Free-500x281.png" alt="Logo de Free"></a>
-        </div>
-    </header>
-    <style>
-    .timeline {
-        position: relative;
-        max-width: 800px;
-        margin: 60px auto 20px auto; /* L'espace du haut */
-        display: flow-root; 
-    }
-    /* Le trait central */
-    .timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 200px;       /* FORCE le trait vertical à commencer 50px plus bas */
-    bottom: 0;
-    width: 2px;
-    height: 1700px;
-    background: #b80000;
-}
-
-    /* Les blocs séparés en deux */
-    .event {
-        width: 100%;
-        margin-bottom: 100px;
-    }
-    /* Un coup à gauche, un coup à droite */
-    .event:nth-child(odd) { float: left; clear: both; text-align: right; padding-right: 100px; box-sizing: border-box; }
-    .event:nth-child(even) { float: right; clear: both; text-align: left; padding-left: 100px; box-sizing: border-box; }
     
-    .year { font-weight: bold; color: #b80000; }
-</style>
+ <header class="header">
+ <div class="header-left">
+ <button type="button" id="btnMenu" aria-label="Ouvrir le menu">
+ <span> MENU</span>
+ </button>
+ <nav id="menu"></nav>
+ </div>
+ <h1>Histoire de l'entreprise</h1>
+ <div class="content">
+ <a href="../index.html">
+ <img src="../img/Logo-de-Free-500x281.png" alt="Logo de Free - retour à l'accueil">
+ </a>
+ </div>
+ </header>
+ <div class="intro-page">
+    <p>
+        L'histoire de Free débute bien avant son lancement grand public.
+        Depuis ses origines dans les services Minitel jusqu'à la révolution de l'Internet gratuit et le changement du marché mobile.
+        Cette page retrace les grandes étapes de cette évolution, pour comprendre comment Free est devenu un acteur incontournable du paysage numérique français.
+    </p>
+</div>
+ 
 
-<div class="timeline"></div>
-<div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:left;">Années 1990</div>
-                    <p style="text-align:left;">Xavier Niel rachète Fermic Multimedia (Minitel), qui devient Iliad.</p>
-                </div>
+ <main>
+ <section class="timeline" aria-label="Frise chronologique de l'histoire de Free">
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>Années 1990</strong></span>
+ <h2>Naissance d'Iliad</h2>
+ <p>Xavier Niel rachète la société Fermic Multimedia en 1991, spécialisée dans les services Minitel, et la renomme Iliad en 1994. Cette acquisition marque le début d'une stratégie de diversification dans les télécommunications. Iliad se positionne rapidement comme un acteur innovant du secteur numérique français, posant les bases de ce qui deviendra Free.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="iliad_1990.jpg" alt="Logo historique d'Iliad dans les années 1990">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>26 avril 1999</strong></span>
+ <h2>L'accès Internet gratuit</h2>
+ <p>Free révolutionne le marché de l'accès à Internet en France en proposant une connexion illimitée sans abonnement et sans numéro de téléphone surtaxé. Cette offre disruptive casse le modèle économique établi par les fournisseurs d'accès traditionnels, qui facturaient alors à la minute. Free acquiert ainsi une base d'utilisateurs massive en quelques mois seulement.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="free_internet_1999.jpg" alt="Ancienne page d'accueil de Free en 1999 proposant l'accès Internet gratuit">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>2002</strong></span>
+ <h2>Première Freebox</h2>
+ <p>Lancement de la Freebox, un boîtier unique qui combine accès Internet ADSL, téléphonie IP et télévision pour un forfait mensuel de 29,99 €. Cette offre "triple play" inédite en France force les concurrents à s'aligner sur les prix et transforme radicalement le paysage des télécommunications. Free devient le troisième opérateur du pays.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="freebox_v1.jpg" alt="La première Freebox sortie en 2002, boîtier noir rectangulaire">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>2004</strong></span>
+ <h2>Iliad en bourse</h2>
+ <p>Iliad entre à la Bourse de Paris, levant des fonds importants pour financer son expansion. L'introduction en bourse valorise l'entreprise à plusieurs milliards d'euros et permet de consolider sa position face à France Télécom et ses concurrents. Cette étape marque la transformation de Free en acteur majeur coté en bourse.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="free_bourse.jpg" alt="Symbole boursier d'Iliad lors de son introduction en bourse en 2004">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>2006</strong></span>
+ <h2>La Freebox HD</h2>
+ <p>Free lance la Freebox HD, intégrant un décodeur télévision haute définition et un disque dur pour l'enregistrement des programmes. Cette innovation technique renforce l'attractivité de l'offre Freebox et permet à l'entreprise de conserver son avance technologique sur le marché de la télévision par Internet. </p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="freebox_hd.jpg" alt="La Freebox HD avec son décodeur télévision haute définition">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>14 décembre 2010</strong></span>
+ <h2>La Freebox Révolution</h2>
+ <p>Présentation de la Freebox Révolution, conçue par le designer Philippe Starck. Ce boîtier au design épuré intègre la fibre optique et des fonctionnalités multimédia avancées. Cette collaboration avec un designer de renom renforce l'image de marque de Free et positionne l'entreprise comme un acteur premium du marché.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="freebox_revolution.jpg" alt="La Freebox Révolution au design signé Philippe Starck, boîtier noir cubique">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>10 janvier 2012</strong></span>
+ <h2>Arrivée de Free Mobile</h2>
+ <p>Free Mobile obtient sa licence de quatrième opérateur mobile et lance des forfaits à 2 € et 19,99 € par mois. Ces tarifs disruptifs font immédiatement chuter les prix du marché mobile français de 20 à 30 %. Les opérateurs historiques (Orange, SFR, Bouygues) sont contraints de revoir leur stratégie tarifaire, bénéficiant indirectement aux consommateurs.
+ </p></div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="free_mobile.jpg" alt="Logo Free Mobile lancé en janvier 2012 avec ses forfaits à 2 euros et 19,99 euros">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ 
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>15 décembre 2020</strong></span>
+ <h2>L'ère de la 5G</h2>
+ <p>Free Mobile déploie son réseau 5G en France, offrant des débits jusqu'à dix fois supérieurs à la 4G. Cette technologie permet de nouveaux usages (streaming 4K, réalité augmentée, IoT) et renforce la compétitivité de Free face à ses concurrents. L'entreprise investit massivement dans les infrastructures pour couvrir le territoire national.
+</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="free_5g.jpg" alt="Antenne 5G de Free Mobile activée en décembre 2020">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ <article class="event">
+ <div class="event-text">
+ <span class="year"><strong>30 janvier 2024</strong></span>
+ <h2>Freebox Ultra</h2>
+ <p>Présentation de la Freebox Ultra, compatible Wi-Fi 7 et offrant des débits jusqu'à 8 Gbit/s. Cette box intègre un routeur nouvelle génération et des fonctionnalités domotiques avancées. Free continue ainsi d'innover dans le haut débit pour maintenir son positionnement technologique et fidéliser sa base de clients.</p>
+ </div>
+ <div class="event-dot" aria-hidden="true"></div>
+ <figure class="event-figure">
+ <img src="freebox_ultra.jpg" alt="La Freebox Ultra présentée en janvier 2024 avec Wi-Fi 7 et débits jusqu'à 8 Gbit/s">
+ <figcaption></figcaption>
+ </figure>
+ </article>
+
+ </section>
+          
+
+        <!-- NOUVELLE SECTION : XAVIER NIEL -->
+        <section class="focus-xavier">
+            <div class="focus-texte">
+                <h2>Qui est Xavier Niel ?</h2>
+                <p>Fondateur de Free et du groupe Iliad, Xavier Niel est un entrepreneur et homme d'affaires français. Pionnier de l'internet gratuit en France avec Free en 1999, il a révolutionné le marché des télécommunications en cassant les prix et en démocratisant l'accès au haut débit et à la téléphonie mobile. Aujourd'hui, il est également reconnu pour ses investissements dans la French Tech et la formation au numérique via l'école 42.</p>
             </div>
-            
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:right;">26 avril 1999</div>
-                    <p style="text-align:right;">Free lance l'accès à Internet sans abonnement, révolutionnant le marché avec une offre illimitée.</p>
-                </div>
-            </div>
+            <figure class="focus-image">
+                <img src="xavier_niel.jpg" alt="Portrait de Xavier Niel, fondateur de Free et du groupe Iliad">
+                <figcaption></figcaption>
+            </figure>
+        </section>
 
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:left;">2002</div>
-                    <p style="text-align:left;">Première Freebox : accès ADSL et téléphonie IP pour 29,99 €/mois.</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:right;">2007</div>
-                    <p style="text-align:right;">Lancement de la Freebox HD, intégrant un décodeur TV haute définition et des services multimédia avancés.</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:left;">2010</div>
-                    <p style="text-align:left;">Iliad entre en bourse, marquant une étape majeure dans son développement financier.</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:right;">14 décembre 2010</div>
-                    <p style="text-align:right;">Sortie de la Freebox Révolution, au design épuré signé Philippe Starck, incluant fibre optique.</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:left;">10 janvier 2012</div>
-                    <p style="text-align:left;">Lancement de Free Mobile avec des forfaits disruptifs (Low Cost), cassant les prix du marché mobile.</p>
-                </div>
-            </div>
-
-           
-
-           
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:right;">2020</div>
-                    <p style="text-align:right;">Expansion internationale avec l'acquisition d'opérateurs en Italie (Iliad Italia).</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:left;">15 décembre 2020</div>
-                    <p style="text-align:left;">Arrivée officielle de la 5G sur le réseau Free Mobile.</p>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event-content">
-                    <div class="year" style="text-align:right;">30 janvier 2024</div>
-                    <p style="text-align:right;">Présentation de la Freebox Ultra, offrant des débits pouvant atteindre 8 Gbit/s via Wi-Fi 7.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-   
     
-     <footer>
-        <img src="../img/Logo_équipe2.png" alt="Logo de notre équipe">
-        <br>
-        <br>Mail : <a href="mailto:yanis.iklef@edu.univ-fcomte.fr?subject=SAE_1_05_06">yanis.iklef@edu.univ-fcomte.fr</a>
-        <br>Créé par : Yanis Iklef, membre des 5 Webmasters
-    </footer>
+ </main>
+
+<footer>
+    <img src="../img/Logo_équipe2.png" alt="Logo de l'équipe Les 5 Webmasters">
+    <br>
+    <br> Mail : <a href="mailto:yanis.iklef@edu.univ-fcomte.fr?subject=SAE_1_05_06">yanis.iklef@edu.univ-fcomte.fr</a>
+     <br>
+     Créé par : Yanis Iklef, membre des 5 Webmasters
+
+</footer>
 </body>
 </html>
