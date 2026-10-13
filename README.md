@@ -14,6 +14,18 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Auteur :** Doryann Gras  
 **Utilité :** Accueil, page servant à accéder aux autres  
+
+**Lien vers le résultat de conformité de la page index :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2)
+
+<img src="img/capture_index_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
+
+
+**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=6caa7ac9-1776-4821-91e2-18755ed7686b)
+
+<img src="img/capture_index_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+
+**La page et les vérifications ont été faites par Nolan FISCHER.**
 ### page1.html :  
 **Auteur :** Nolan Fischer  
 **Utilité :** Économie 
