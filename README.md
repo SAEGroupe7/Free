@@ -7,6 +7,8 @@
 Ce dépôt correspond à un site web créé en HTML/CSS/JS dans le cadre de la SAÉ 05-06 à l'IUT de Belfort-Montbéliard. Ce site présente des informations concernant l'entreprise Free et sert de vitrine pour présenter l'entreprise, ses activités, son organisation et son historique. Free est un acteur du secteur des télécommunications et du numérique. Les différentes pages traitent de l'histoire de la marque, ses produits et envers qui ils sont destinés mais mais aussi sous un angle économique (chiffre d'affaires, parts de marché...).
 Pour la conception du site, nous nous sommes grandement inspirés du site officiel de Free (disponible [ici](https://www.free.fr/)) et du site d'un de ses principaux concurrents : [Orange](https://www.orange.fr/portail)
 
+Nous avons choisi un carrousel fait en javascript pour la page d'accueil et une disposition dite "tondeuse à gazon" pour les autres pages. Chaque personne a réalisé au moins une page et fait les recherches en lien avec son sujet. Les contributions pour le CSS ont été effectuées par tout le monde. L'hérbergement sur les autres sites a été effectué par Nolan FISCHER et l'hébergement sur GitHub par Mohammed Hedi Hamza.
+
 **Lien vers le site Free :** https://saegroupe7.github.io/Free/
 ## Développement Site Web et Validation des pages :
 
@@ -15,13 +17,13 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 **Auteur :** Doryann Gras  
 **Utilité :** Accueil, page servant à accéder aux autres  
 
-**Lien vers le résultat de conformité de la page index :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2)
+**Lien vers le résultat de conformité de la page index :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2F)
 
 <img src="img/capture_index_W3C.png" style="width=400px" alt="capture ecran sur w3c">
 
 
 
-**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=6caa7ac9-1776-4821-91e2-18755ed7686b)
+**Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=4b0622af-e8e6-42d7-9207-a1dfe06afaac)
 
 <img src="img/capture_index_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
