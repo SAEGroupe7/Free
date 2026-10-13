@@ -7,11 +7,11 @@
 
 const liens = [
   { href: "index.html", texte: "Accueil" },
-  { href: "page4/page4.html", texte: "Histoire de l'entreprise" },
+  { href: "page1/page1.html", texte: "Économie" },
   { href: "page2/page2.html", texte: "Services et produits" },
   { href: "page3/page3.html", texte: "Présentation des produits et services" },
-  { href: "page1/page1.html", texte: "Économie" },
-  { href: "page5/page5.html", texte: "Expansion du groupe Iliad en Europe" },
+  { href: "page4/page4.html", texte: "Histoire de l'entreprise" },
+  { href: "page5/page5.html", texte: "Initiatives pour l'envrionnement" },
 ];
 
 const racine = document.currentScript.src;
