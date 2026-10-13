@@ -84,7 +84,7 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a2391d94-6bff-4868-b315-c8be70a24c09)
 
-<img src="page5/capture_5_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+<img src="page5/capture_5_ecoconception.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
 **La page a été faite par Doryann GRAS et les vérifications par Nolan FISCHER.**
 
