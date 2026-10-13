@@ -909,6 +909,12 @@ footer a:focus-visible {
   margin-top: 0; /* en flex, cette marge s'ajouterait à celle du titre */
 }
 
+
+.jester-item a {
+    text-decoration: none;
+}
+
+
 .box .image-section img {
   max-height: 320px;
   object-fit: contain;
