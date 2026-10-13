@@ -131,3 +131,4 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 
 ## Contributeurs
+![capture d'écran sur la contribution des membres du projet](img/livrable2_contributors.png)
