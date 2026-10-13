@@ -33,6 +33,12 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 ### page2.html :  
 **Auteur :** Ilyana Gueraouni  
 **Utilité :** Service et produit  
+
+<img src="page2/capture_2_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
+<img src="page2/capture_2_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+
+
 ### page3.html :  
 **Auteur :** Mohamed Hedi Hamza  
 **Utilité :** Présentation des produits et services  
@@ -53,7 +59,11 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 
 **Lien vers le résultat de conformité de la page 4 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage4%2Fpage4.html)
 
+<img src="page4/capture_4_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
 **Lien vers la validation d'éco-conception :** [Cliquer ici](https://www.ecoindex.fr/resultat/?id=a700e5f1-41ad-45d8-9364-32cda1d0907b)
+
+<img src="page4/capture_4_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
 
 
 **La page et les vérifications ont été faites par Yanis IKLEF.**
@@ -61,6 +71,11 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 ### page5.html :  
 **Auteur :** Doryann Gras  
 **Utilité :** Expansion du groupe Iliad en Europe
+
+<img src="page5/capture_5_W3C.png" style="width=400px" alt="capture ecran sur w3c">
+
+<img src="page5/capture_5_ecoconcept.png" style="width=400px" alt="capture ecran sur ecoconcept pour tester l'éco-conception">
+
 ## Répartition du travail
 
 ### Planification - Diagramme de GANTT
