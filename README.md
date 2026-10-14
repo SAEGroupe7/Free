@@ -116,7 +116,7 @@ Nous avons choisi un carrousel fait en javascript pour la page d'accueil et une 
 - Iklef Yanis
 - Fischer Nolan
 - Gras Doryann
-- Guearouni Ilyana 
+- Gueraouni Ilyana 
 
 ### Développement site
 
