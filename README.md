@@ -63,7 +63,7 @@ Nous avons choisi un carrousel fait en javascript pour la page d'accueil et une 
 **Auteur :** Mohamed Hedi Hamza  
 **Utilité :** Présentation des produits et services  
 
-**Lien vers le résultat de conformité de la page 3 :** [CLiquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage3%2Fpage3.html)
+**Lien vers le résultat de conformité de la page 3 :** [Cliquer ici](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fsaegroupe7.github.io%2FFree%2Fpage3%2Fpage3.html)
 
 <img src="page3/capture_3_W3C.png" style="width=400px" alt="capture ecran sur w3c">
 
